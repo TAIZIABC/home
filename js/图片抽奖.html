@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        img{
+            display: block;
+            width: 600px;
+            margin: 0 auto;
+        }
+        button{
+            width: 150px;
+            height: 30px;
+            border-radius: 5px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+<button>选美女</button>
+<img src="../images/pb1.jpg"/>
+<script>
+    window.onload=function(){
+        var img=document.getElementsByTagName("img")[0];
+        var btn=document.getElementsByTagName("button")[0];
+        var arr = ['../images/pb1.jpg','../images/pb2.jpg','../images/pb3.jpg','../images/pb4.jpg','../images/pb5.jpg',
+            '../images/pb6.jpg','../images/pb7.jpg','../images/pb8.jpg','../images/pb9.jpg'];
+        var timer;
+        var stat=1;
+        btn.onclick=function(){
+            if(stat==1){
+                    timer=setInterval(function(){
+                    var a=parseInt(Math.random()*10);
+                    img.src=arr[a];
+                    document.title(arr[a]);
+                },100);
+                stat=2;
+            }else if(stat==2){
+                clearInterval(timer);
+                stat=1;
+            }
+        }
+    }
+</script>
+</body>
+</html>

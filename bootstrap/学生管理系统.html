@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="bootstrap.css">
+    <style>
+        .table{
+            margin-top: 30px;
+            width: 800px;
+        }
+        div.header{
+            width: 80%;
+            height: 100px;
+            background-color: #eeeeee;
+            margin: 0 auto;
+            text-align: center;
+        }
+        div.header h1 span{
+            display: inline-block;
+            width: 40px;
+        }
+        div.con{
+            width: 80%;
+            margin: 0 auto;
+            background-color: #eeeeee;
+            position: relative;
+        }
+        div.header li{
+            list-style: none;
+            width: 150px;
+            float: left;
+            font-size: 20px;
+        }
+        div.header li:nth-child(1){
+            margin-left: 200px;
+        }
+        img{
+            border: 1px solid #000;
+            width: 250px;
+            position: absolute;
+            right: 10px;
+            top: 0px;
+
+        }
+
+    </style>
+</head>
+<body>
+<div class="header">
+    <h1>学<span></span>生<span></span>管<span></span>理<span></span>系<span></span>统</h1>
+    <ul>
+        <li><a href="">学生查询</a></li>
+        <li><a href="">学生管理</a></li>
+        <li><a href="">成绩管理</a></li>
+        <li><a href="">课程管理</a></li>
+    </ul>
+</div>
+<div class="con">
+    <table class="table table-bordered table-striped">
+        <thead>
+        <tr>
+            <th>功能选择</th>
+            <th>
+            <td> 学生信息</td>
+            </th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td><button class="btn btn-default">查询</button></td>
+            <td>学号</td>
+            <td><input type="text"></td>
+        </tr>
+        <tr>
+            <td><button class="btn btn-default">增加</button></td>
+            <td>姓名</td>
+            <td><input type="text"></td>
+        </tr>
+        <tr>
+            <td><button class="btn btn-default">修改</button></td>
+            <td>性别</td>
+            <td>
+                <input type="radio" name="aa" checked>男
+                <input type="radio" name="aa">女
+            </td>
+        </tr>
+        <tr>
+            <td><button class="btn btn-default">删除</button></td>
+            <td>专业</td>
+            <td>
+                <select>
+                    <option value="计算机">计算机</option>
+                    <option value="网络工程">网络工程</option>
+                    <option value="通信工程">通信工程</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>出生时间</td>
+            <td><input type="date"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>总评分</td>
+            <td><input type="text"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>备注</td>
+            <td><input type="text"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>照片</td>
+            <td><input type="file"></td>
+        </tr>
+        </tbody>
+    </table>
+    <img src="../images/huge.jpg" >
+</div>
+<script src="bootstrap.js"></script>
+</body>
+</html>

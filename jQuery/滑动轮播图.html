@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #aa{
+            width: 800px;
+            height: 800px;
+            margin: 20px auto;
+            overflow: hidden;
+            position: relative;
+        }
+        #bb{
+            width: 4800px;
+            height: 800px;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        #bb li{
+            list-style: none;
+            width: 800px;
+            height: 800px;
+            float: left;
+        }
+    </style>
+    <script src="../source/jquery-3.2.1.js"></script>
+    <script>
+        $(function(){
+            var c=0;
+            var timer=setInterval(function(){
+                c++;
+                if(c==6) {
+                    $("#bb").css({left: "0"});
+                    c = 1;
+                }
+                var lt=c*(-800);
+                $("#bb").animate({left:lt},1000);
+            },2000)
+        })
+    </script>
+</head>
+<body>
+<div id="aa">
+    <ul id="bb">
+        <li><img src="../images/tab1.jpg"/></li>
+        <li><img src="../images/tab2.jpg" /></li>
+        <li><img src="../images/tab3.jpg" /></li>
+        <li><img src="../images/tab4.jpg" /></li>
+        <li><img src="../images/tab5.jpg" /></li>
+        <li><img src="../images/tab1.jpg"/></li>
+    </ul>
+</div>
+</body>
+</html>

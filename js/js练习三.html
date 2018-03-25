@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>jsp练习三</title>
+    <script>
+        window.onload = function(){
+            var oTex = document.getElementById('tex');
+            var oBut = document.getElementById('but');
+            var oTxa = document.getElementById('txa');
+            oBut.onclick = function(){
+                oTxa.innerHTML = oTex.value;
+            }
+        }
+    </script>
+</head>
+<body>
+<input type="text" id="tex"/>
+<input type="button" value="添加信息" id="but"/><br/>
+<textarea name="" id="txa" cols="30" rows="10"></textarea>
+</body>
+</html>

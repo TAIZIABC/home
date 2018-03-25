@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        button{
+            width: 100px;
+            height: 40px;
+            border-radius: 15px;
+        }
+        #bb{
+            position: relative;
+        }
+        #bb div{
+            width: 300px;
+            height: 200px;
+            border: 1px solid #000;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        .hide{
+            display: none;
+        }
+        .btn2{
+            background-color: red;
+        }
+    </style>
+    <script>
+        window.onload=function(){
+            var aa=document.getElementById("aa");
+            var btn=aa.getElementsByTagName("button");
+            var bb=document.getElementById("bb");
+            var div=bb.getElementsByTagName("div");
+            for(var i=0;i<btn.length;i++){
+                btn[i].index=i;
+                btn[i].onclick=function(){
+                    for(var i=0;i<btn.length;i++){
+                        btn[i].className="";
+                        div[i].className="hide";
+                    }
+                    btn[this.index].setAttribute("class",'btn2');
+                    div[this.index].setAttribute("class",'' );
+                }
+
+            }
+        }
+    </script>
+</head>
+<body>
+    <div id="aa">
+        <button class="btn2">A</button>
+        <button>B</button>
+        <button>C</button>
+    </div>
+    <div id="bb">
+        <div>AAAAAAAAA</div>
+        <div class="hide">BBBBBBBBB</div>
+        <div class="hide">CCCCCCCCC</div>
+    </div>
+</body>
+</html>

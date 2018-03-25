@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="../source/jquery-3.2.1.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#btn").click(function(){
+                xhr=$.ajax({
+                    type:"GET",
+                    url:"abc/aaa.txt",
+                    async:true,
+                    success:function(){
+                        $("#are").text(xhr.responseText);
+                    },
+                    error:function(){
+                        alert("请求失败");
+                    }
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+<textarea name="" id="are" cols="30" rows="10"></textarea>
+<button id="btn">获取</button>
+</body>
+</html>

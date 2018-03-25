@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        input{
+            width: 300px;
+            height: 40px;
+        }
+        #bb{
+            width: 500px;
+            height: 100px;
+            margin-top: 80px;
+            margin-left: 35%;
+        }
+        #aa{
+            width: 1300px;
+            line-height: 300px;
+            font-size: 290px;
+            text-align: center;
+            font-weight: 700;
+            margin: 200px auto;
+            background-color: red;
+            transform: rotateY(180deg);
+        }
+       #cc{
+           width: 80px;
+           height: 42px;
+           border-radius: 10px;
+       }
+    </style>
+    <script>
+        window.onload=function(){
+            var tex=document.getElementsByTagName("input")[0];
+            var btn=document.getElementById("cc");
+            var aa=document.getElementById("aa");
+            btn.onclick=function(){
+                aa.innerHTML=tex.value;
+            }
+        }
+    </script>
+</head>
+<body>
+    <div id="bb">请输入文字：<input type="text" />
+        <button id="cc">提交</button>
+    </div>
+    <div id="aa" >ABCD</div>
+</body>
+</html>

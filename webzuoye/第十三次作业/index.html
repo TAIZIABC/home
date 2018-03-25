@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        div.contain{
+            width: 400px;
+            height: 400px;
+            margin: 150px auto;
+            border: 1px solid blue;
+        }
+        div.contain h1{
+            text-align: center;
+        }
+        table{
+            margin: 40px auto;
+        }
+        table tr{
+            height: 40px;
+        }
+        input[type='text']{
+            height: 20px;
+        }
+        div.contain #btn{
+            width: 200px;
+            height: 40px;
+            margin-left: 110px;
+        }
+    </style>
+</head>
+<body>
+    <div class="contain">
+        <h1>查询信息</h1>
+        <table>
+            <tr>
+                <td>姓名：</td>
+                <td><input type="text" id="name" placeholder="请输入姓名"></td>
+            </tr>
+            <tr>
+                <td>性别：</td>
+                <td><input type="text" id="sex"></td>
+            </tr>
+            <tr>
+                <td>年龄：</td>
+                <td><input type="text" id="age"></td>
+            </tr>
+            <tr>
+                <td>专业：</td>
+                <td><input type="text" id="major"></td>
+            </tr>
+        </table>
+        <input type="button" value="查询" id="btn">
+    </div>
+    <script>
+        $("#btn").on('click',function(){
+            $.ajax({
+                type:'POST',
+                url:'search.php',
+                async:'false',
+                data:{name:$("#name").val()},
+                success:function(data){
+                    $("#name").val(data.name);
+                    $("#age").val(data.age);
+                    $("#sex").val(data.sex);
+                    $("#major").val(data.val)
+                },
+                error:function(){
+                    alert("请求失败！");
+                }
+            })
+        })
+    </script>
+</body>
+</html>

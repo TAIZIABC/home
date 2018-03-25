@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+        var arr=[1,2,5,8,7,55,66,2,488,8,7];
+        function max(arr){
+            var temp=arr[0];
+            for(var i=1;i<arr.length;i++){
+                if(temp<arr[i]){
+                    temp=arr[i];
+                }
+            }
+            return temp;
+        }
+        var aa=max(arr);
+        document.write('最大的是：'+aa+"<br>");
+
+        var bb=[['苹果','香蕉','雪梨','葡萄'],['大众','宝马','奥迪','奔驰'],['范冰冰','刘诗诗','高圆圆']];
+        for(var i=0;i<bb.length;i++){
+            for(var j=0;j<bb[i].length;j++){
+                document.write(bb[i][j]+"&emsp;");
+            }
+            document.write("<br>");
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

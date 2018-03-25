@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<button id="aa">GO</button>
+<script>
+    window.onload=function(){
+        var btn=document.getElementById("aa");
+
+        btn.onclick=function(){
+            var a=parseInt(Math.random()*10);
+            var timer=setInterval(function(){
+                if(a==10){
+                    alert(a);
+                }
+               document.title=a;
+            },100);
+        }
+    }
+
+
+
+</script>
+</body>
+</html>

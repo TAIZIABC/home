@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var arr=[];
+    for(var i=0;i<20;i++){
+        arr[i]=i;
+    }
+    document.write(arr);
+    arr=arr.sort(function(){return 0.5-Math.random()});
+    document.write("<br/>");
+    document.write(arr);
+</script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+     <div id="aa">
+         <!--<li v-for="city in city">{{city}}</li>-->
+         <li v-for="(obj,index) in dog">{{index+':'+obj}}</li>
+     </div>
+         <script src="vue.js"></script>
+         <script>
+             new Vue({
+                 el:"#aa",
+                 data:{
+                     city:['江西','北京','江苏','广东','湖南'],
+                     dog:{'name':'旺财','weight':'50kg','height':'50cm'}
+                 }
+             })
+         </script>
+</body>
+</html>

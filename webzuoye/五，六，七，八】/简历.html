@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>个人简历</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul,li{
+            list-style: none;
+        }
+        a{
+            text-decoration: none;
+        }
+        body{
+            background-color: #399ECF;
+        }
+        div.root{
+            width: 1040px;
+            margin: 20px auto;
+            padding: 30px;
+        }
+        .title{
+            text-align: center;
+            color: white;
+            font-size: 30px;
+            font-family: "Book Antiqua";
+        }
+        nav>ul{
+            width: 100%;
+            margin-top: 50px;
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        nav>ul>li{
+            width: 8%;
+            line-height: 20px;
+            text-align: center;
+            font-size: 20px;
+            color: white;
+        }
+        nav>ul>li:nth-child(1){
+            border-bottom: 3px solid white;
+        }
+        div.content{
+            width: 1000px;
+            padding: 20px;
+            position: relative;
+            background-color: #fff;
+        }
+        div.top{
+            width: 200px;
+        }
+        div.top-right{
+            width: 740px;
+            border-top: 1px solid #000000;
+            position: absolute;
+            top: 20px;
+            left: 260px;
+
+        }
+        div.top-right ul li{
+            float: left;
+            width: 40%;
+            line-height: 50px;
+            margin-right: 20px;
+        }
+        div.footer{
+            border-top: 2px solid #000000;
+            margin-top: 40px;
+        }
+        div.footer td{
+            width: 160px;
+            height: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div class="root">
+        <h1 class="title">电子档案</h1>
+        <nav>
+            <ul>
+                <li><a href="javascript:;" >基本信息</a></li>
+                <li><a href="javascript:;" >成长过程</a></li>
+                <li><a href="javascript:;" >素质能力</a></li>
+                <li><a href="javascript:;" >获奖情况</a></li>
+                <li><a href="javascript:;" >人生规划</a></li>
+                <li><a href="javascript:;" >其他信息</a></li>
+            </ul>
+        </nav>
+        <div class="content">
+            <div class="top">
+                <img src="../../images/10.png" width="200" >
+            </div>
+            <div class="top-right">
+                <h2 style="background-color:#cccccc">姓名：刘遂江</h2>
+                <ul>
+                    <li>学院:&nbsp;&nbsp;&nbsp;&nbsp;信息工程学院</li>
+                    <li>班级:&nbsp;&nbsp;&nbsp;&nbsp;网络工程151班</li>
+                    <li>职位:&nbsp;&nbsp;&nbsp;&nbsp;心理委员</li>
+                    <li>学号:&nbsp;&nbsp;&nbsp;&nbsp;1520153312</li>
+                </ul>
+            </div>
+
+            <div class="footer">
+                <h1 style="background-color:#cccccc">基本信息</h1>
+                <table>
+                    <tr>
+                        <td>姓名：</td><td>刘遂江</td><td>性别：</td><td>男</td><td>出生日期：</td><td>1996-06-09</td>
+
+                    </tr>
+                    <tr><td>曾用名：</td><td>刘慧明</td><td>民族：</td><td>汉</td><td>籍贯</td><td>江西省赣县</td></tr>
+                    <tr>
+                        <td>政治面貌：</td><td>团员</td><td>专业：</td><td>网络工程</td><td>入校时间：</td><td>2015-9</td>
+                    </tr>
+                    <tr><td>姓名</td><td>刘遂江</td><td>性别</td><td>男</td><td>出生日期</td><td>1996-06-09</td></tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

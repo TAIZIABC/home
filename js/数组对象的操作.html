@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <script>
+        var shuzu=[1,5,3,22,47,6,9,44,26,8];
+        document.write(shuzu);
+        document.write('<br/>');
+//        尾部添加
+        shuzu.push(4);
+//        头部添加
+       shuzu.unshift(55);
+        document.write(shuzu);
+        document.write('<br/>');
+//        头部删除
+        shuzu.pop();
+//        尾部删除
+        shuzu.shift();
+        document.write(shuzu);
+        document.write('<br/>');
+//        万能方法
+//        shuzu.splice(2,3);//从第二个开始删除三个数据
+//        shuzu.splice(2,0,4,5);//从第二个开始删除0个数据并添加4，5
+        var re = shuzu.slice(2,4);//从第二个开始截到第4个，但不包含第四个
+//        document.write(re);
+        var res=shuzu.concat(shuzu);
+        var aa=res.join("");
+        document.write(aa);
+
+    </script>
+</body>
+</html>

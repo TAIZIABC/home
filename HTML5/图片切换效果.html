@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        div{
+            width: 800px;
+            height: 1500px;
+            position: relative;
+            margin:0 auto;
+        }
+        #bb{
+            width: 800px;
+            height: 800px;
+            position: fixed;
+            left: 275px;
+            overflow: hidden;
+        }
+        #aa{
+            width: 800px;
+            height: 800px;
+            position: fixed;
+            left: 275px;
+        }
+        #cc{
+            width: 800px;
+            height: 800px;
+        }
+    </style>
+    <script>
+        window.onload=function(){
+            var bb=document.getElementById("bb")
+            window.onscroll=function(){
+                var high=document.documentElement.scrollTop;
+                var re=800-high;
+                if(re<0){
+                    re=0;
+                }
+                bb.style.height=re+'px';
+//                bb.style.width=re+'px';
+            }
+        }
+    </script>
+<body>
+<div id="div">
+    <img id="aa" src="../images/tab1.jpg"/>
+    <div id="bb">
+        <div id="cc">
+            <img  width="800" height="800" src="../images/tab2.jpg"/>
+        </div>
+    </div>
+
+</body>
+</html>

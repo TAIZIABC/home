@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        a{
+            text-decoration: none;
+            color: #ffffff;
+            font-size: 14px;
+        }
+        body{
+            background: url("https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1510074621968&di=0c627f77280aa4c14c2f9de10f169d10&imgtype=0&src=http%3A%2F%2Fimgsrc.baidu.com%2Fbaike%2Fpic%2Fitem%2F9c16fdfaaf51f3deedadb95e97eef01f3a2979e8.jpg");
+            background-size: cover;
+        }
+        li{
+            list-style: none;
+            width: 110px;
+            line-height: 40px;
+            text-align: center;
+        }
+        #nav{
+            width: 100%;
+            height: 40px;
+            background: red;
+            margin: 0 auto;
+        }
+        #nav>li{
+            float: left;
+        }
+        #nav>li:nth-child(1){
+              margin-left: 70px;
+        }
+        #nav>li:nth-child(2):hover #nav-2{
+            height: 320px;
+            opacity: 1;
+        }
+        #nav>li:nth-child(3):hover #nav-3{
+            height: 360px;
+            opacity: 1;
+        }
+        #nav>li:nth-child(6):hover #nav-6{
+            height: 280px;
+            opacity: 1;
+        }
+        #nav>li:nth-child(7):hover #nav-7{
+            height: 80px;
+            opacity: 1;
+        }
+        #nav>li:nth-child(8):hover #nav-8{
+            height: 80px;
+            opacity: 1;
+        }
+        #nav li ul{
+            width: 110px;
+            height: 0;
+            opacity: 0.3;
+            overflow: hidden;
+            background-color: red;
+            transition: all 1s ease;
+        }
+        #nav li ul li:hover{
+            background-color: yellowgreen;
+        }
+    </style>
+    <script>
+        window.onload=function(){
+            var nav=document.getElementById("nav");
+            var lis=nav.getElementsByTagName("li");
+            for(var i=0;i<lis.length;i++){
+                lis[i].index=i;
+                lis[i].onmouseover=function(){
+                    for(var j=0;j<lis.length;j++){
+                        lis[j].style.backgroundColor='';
+                    }
+                    this.style.backgroundColor='yellowgreen';
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <ul id="nav">
+        <li style="background-color: yellowgreen;"><a href="#">首页</a></li>
+        <li><a href="#">学校概况</a>
+            <ul id="nav-2">
+                <li><a href="#">学校简介</a></li>
+                <li ><a href="#">历史沿革</a></li>
+                <li><a href="#">现任领导</a></li>
+                <li><a href="#">历任书记校长</a></li>
+                <li><a href="#">领导关怀</a></li>
+                <li><a href="#">杰出校友</a></li>
+                <li><a href="#">校园结构图</a></li>
+                <li><a href="#">校园导游</a></li>
+            </ul>
+        </li>
+        <li><a href="#">教学工作</a>
+            <ul id="nav-3">
+                <li><a href="#">本科生教育</a></li>
+                <li><a href="#">研究生教育</a></li>
+                <li><a href="#">继续教育</a></li>
+                <li><a href="#">高职教育</a></li>
+                <li><a href="#">实验教学</a></li>
+                <li><a href="#">精品课件</a></li>
+                <li><a href="#">优质课程</a></li>
+                <li><a href="#">教育质量工程</a></li>
+                <li><a href="#">课程中心</a></li>
+            </ul>
+        </li>
+        <li><a href="#">学科建设</a></li>
+        <li><a href="#">科学研究</a></li>
+        <li><a href="#">招生就业</a>
+            <ul id="nav-6">
+                <li><a href="#">本科生招生</a></li>
+                <li><a href="#">研究生招生</a></li>
+                <li><a href="#">高职生招生</a></li>
+                <li><a href="#">成人招生</a></li>
+                <li><a href="#">本科生就业</a></li>
+                <li><a href="#">研究生就业</a></li>
+                <li><a href="#">高职生就业</a></li>
+            </ul>
+        </li>
+        <li><a href="#">人才引进</a>
+            <ul id="nav-7">
+                <li><a href="#">校本部</a></li>
+                <li><a href="#">南昌校区</a></li>
+            </ul>
+        </li>
+        <li><a href="#">学工动态</a>
+            <ul id="nav-8">
+                <li><a href="#">学工部</a></li>
+                <li><a href="#">校团委</a></li>
+            </ul>
+        </li>
+        <li><a href="#">创新就业</a></li>
+        <li><a href="#">心理咨询</a></li>
+    </ul>
+</body>
+</html>

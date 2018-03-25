@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #btn{
+            width: 150px;
+            height: 40px;
+            border-radius:5px;
+        }
+        #aa{
+            width: 300px;
+            height: 300px;
+            border: 1px solid #000;
+        }
+        #bb{
+            margin-top: 10px;
+            width: 300px;
+            height: 300px;
+            border: 1px solid #000;
+        }
+    </style>
+    <script src="../source/jquery-3.2.1.js"></script>
+    <script>
+        $(function(){
+            $("#btn").click(function(){
+                var con=$("#aa").text();
+                $("#aa").text($("#bb").text());
+                $("#bb").text(con);
+            });
+        })
+    </script>
+</head>
+<body>
+<button id="btn">移动</button>
+    <div id="aa">赣州，江西省省辖市，简称“虔”，别称“虔城”，也称“赣南”，位于江西省南部，是江西省的南大门，是江西省面积最大、人口最多的地级市。
+        赣州是江西省省域副中心城市，拥有4个国家级开发区和1个综合保税区。赣州是全国稀有金属产业基地和先进制造业基地、原中央苏区振兴发展示范区、红色文化传承创新区和著名的红色旅游目的地。赣州是中国区域性综合交通枢纽、赣粤闽湘四省通衢的区域性现代化中心城市。赣州都市区是江西省重点培育和发展的三大都市区之一。</div>
+    <div id="bb"></div>
+
+</body>
+</html>

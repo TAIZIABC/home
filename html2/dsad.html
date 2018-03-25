@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title></title>
+  <script src="../source/jquery-3.2.1.js"></script>
+  <script src="../source/jquery-ui.min.js"></script>
+  <link rel="stylesheet" href="../source/jquery-ui.min.css"/>
+  <script>
+    $(document).ready(function(){
+      $( "select" ).selectmenu({
+        classes: {
+          "ui-selectmenu-button": "ui-button-icon-only demo-splitbutton-select"
+        },
+        change: function(){
+          $( ".output" ).append( "<li>" + this.value + "</li>" );
+        }
+      $("#controlgroup").controulgroup();
+    })
+  </script>
+</head>
+<body>
+    <div id="controlgroup">
+      <button>工作地点</button>
+      <select name="" id="">
+        <option value="">北京</option>
+        <option value="">上海</option>
+        <option value="">深圳</option>
+      </select>
+      <br/>
+      <ul></ul>
+    </div>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        table{
+            border-collapse: collapse;
+            width: 900px;
+            margin: 150px auto;
+        }
+        th,td{
+            width: 300px;
+            border: 3px solid green;
+            font-size: 25px;
+        }
+        .header{
+            background-color: darkgreen;
+        }
+    </style>
+    <script>
+        window.onload=function(){
+            var aa=document.getElementById("aa");
+            var tr=aa.getElementsByTagName("tr");
+            for(var i=1;i<tr.length;i++){
+                tr[i].onclick=function(){
+                    for(var i=1;i<tr.length;i++){
+                        tr[i].style.backgroundColor="";
+                    }
+                    this.style.backgroundColor="red";
+                }
+                tr[i].onmouseover=function(){
+                    for(var i=1;i<tr.length;i++){
+                        tr[i].style.backgroundColor="";
+                    }
+                    this.style.backgroundColor="green";
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <table id="aa">
+        <tr class="header">
+            <th>姓名</th>
+            <th>专业</th>
+            <th>籍贯</th>
+        </tr>
+        <tr>
+            <td>张三</td>
+            <td>网络工程</td>
+            <td>江西</td>
+        </tr>
+        <tr>
+            <td>张三</td>
+            <td>软件工程</td>
+            <td>浙江</td>
+        </tr>
+        <tr>
+            <td>李四</td>
+            <td>信安工程</td>
+            <td>湖南</td>
+        </tr>
+        <tr>
+            <td>王五</td>
+            <td>土木工程</td>
+            <td>上海</td>
+        </tr>
+        <tr>
+            <td>赵六</td>
+            <td>软件工程</td>
+            <td>海南</td>
+        </tr>
+    </table>
+</body>
+</html>

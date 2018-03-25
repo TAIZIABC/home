@@ -1,0 +1,24 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="./build/react.js"></script>
+    <script src="./build/react-dom.js"></script>
+    <script src="./build/browser.min.js"></script>
+</head>
+<body>
+<div id="example"></div>
+<script type="text/babel">
+    var names=[
+        <h1 key="0">hello Alice</h1>,
+        <h2 key="5">hello Join</h2>
+    ];
+
+    ReactDOM.render(
+            <div>{names}</div>,
+        document.getElementById('example')
+    );
+
+</script>
+</body>
+</html>

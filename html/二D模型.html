@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>二D模型</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        div{
+            width: 366px;
+            height: 508px;
+            margin: 100px auto;
+            background-color: #cccccc;
+            perspective: 500px;
+
+        }
+        div img{
+            transform-origin:center bottom ;
+            transition:transform 2s ;
+        }
+        div:hover img{
+            transform: rotateX(70deg);
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <img src="../images/pk.png" />
+    </div>
+</body>
+</html>

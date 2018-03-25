@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #main{
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="main" width="400" height="400"></canvas>
+    <script>
+        var cav=document.getElementById("main").getContext("2d");
+        cav.strokeStyle='yellow';
+        cav.arc(200,150,100,0,Math.PI*2);
+        cav.stroke();
+        cav.translate(200,150);//更换坐标原点
+        function draw(x,y){
+            cav.fillStyle='yellow';
+            cav.arc(x,y,10,0,Math.PI*2);
+            cav.stroke();
+//            cav.fill();
+        }
+        var x=-100;
+        var y;
+        var stat=1;
+        (function () {
+            var a=10000-x*x;
+            if(x==100){
+                stat=-1;
+            }
+            if(stat==1){
+                x++;
+                y=Math.pow(a,1/2);
+            }
+            if(stat==-1){
+                x--;
+                y=-Math.pow(a,1/2);
+            }
+
+            draw(x,y);
+            setTimeout(arguments.callee,10);
+
+        }());
+
+    </script>
+</body>
+</html>

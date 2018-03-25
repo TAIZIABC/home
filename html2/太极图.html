@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        body{
+            background-color:#cccccc;
+        }
+        .outer{
+            width: 600px;
+            height: 600px;
+            border-radius: 50%;
+            background: linear-gradient(#000000 50%,#ffffff 50%);
+            margin: 50px auto;
+            display: flex;
+            align-items: center;
+            transform: rotate(0deg);
+            animation: sport 2s linear 0s infinite normal;
+        }
+        .left,.right{
+            width: 70px;
+            height: 70px;
+        }
+        .left{
+            border-radius: 50%;
+            background-color: #ffffff;
+            border: 115px solid #000;
+        }
+        .right{
+            border-radius: 50%;
+            background-color:#000000;
+            border: 115px solid #ffffff;
+        }
+        @keyframes sport {
+            from{
+                transform: rotate(0deg);
+            }
+            to{
+                transform: rotate(-360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div class="left"></div>
+        <div class="right"></div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>js设置div的内容</title>
+    <script>
+        function showBtn(){
+            document.getElementById("content").innerHTML=
+                    "大家好，我是添加到div的内容";
+        }
+    </script>
+</head>
+<body>
+<input type="button" onclick="showBtn()" value="点我" />
+<div id="content"></div>
+</body>
+</html>

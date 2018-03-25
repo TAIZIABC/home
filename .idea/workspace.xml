@@ -1,0 +1,831 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="f4e3af82-f288-41c9-8179-17f92e94710b" name="Default" comment="" />
+    <ignored path="新建文件夹.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="ExportToHTMLSettings">
+    <option name="OUTPUT_DIRECTORY" value="C:\HTML\exportToHTML" />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="新建文件夹" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="serve.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/nodejs/serve.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="114">
+              <caret line="6" column="41" lean-forward="false" selection-start-line="6" selection-start-column="41" selection-end-line="6" selection-end-column="41" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="server2.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/nodejs/server2.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="php" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>cans</find>
+      <find>cxt</find>
+      <find>time</find>
+      <find>hour</find>
+      <find>btn</find>
+      <find>class='onecenter'</find>
+      <find>fil</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>cas</replace>
+      <replace>cav</replace>
+    </replaceStrings>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$USER_HOME$/Desktop/第十次作业/第十次作业/作业登入系统表单.html" />
+        <option value="$PROJECT_DIR$/webzuoye/第九次作业/DOM生成节点.html" />
+        <option value="$PROJECT_DIR$/reaect/传值.html" />
+        <option value="$USER_HOME$/Desktop/文件/HTML/canvas特效/canvas-special-master/canvas-special-master/love-time/index.html" />
+        <option value="$PROJECT_DIR$/webzuoye/测试2.html" />
+        <option value="$PROJECT_DIR$/vue/双向绑定.html" />
+        <option value="$PROJECT_DIR$/vue/第一个vue程序.html" />
+        <option value="$PROJECT_DIR$/reaect/hello reaect.html" />
+        <option value="$PROJECT_DIR$/vue/v-if的使用.html" />
+        <option value="$PROJECT_DIR$/vue/v-for的使用.html" />
+        <option value="$PROJECT_DIR$/vue/v-bind的使用.html" />
+        <option value="$PROJECT_DIR$/vue/v-build的使用.html" />
+        <option value="$PROJECT_DIR$/vue/信息录入系统.html" />
+        <option value="$PROJECT_DIR$/webzuoye/测试.html" />
+        <option value="$PROJECT_DIR$/bootstrat/node_modules/bootstrap/bootstrap.css" />
+        <option value="$PROJECT_DIR$/bootstrat/bootstrap.css" />
+        <option value="$PROJECT_DIR$/vue/ceshi.html" />
+        <option value="$PROJECT_DIR$/bootstrap/测试.html" />
+        <option value="$PROJECT_DIR$/vue/炫丽小球特效.html" />
+        <option value="$PROJECT_DIR$/bootstrap/学生管理系统.html" />
+        <option value="$PROJECT_DIR$/webzuoye/添加节点与删除节点.html" />
+        <option value="$USER_HOME$/Desktop/作业管理系统/学生管理系统.html" />
+        <option value="$PROJECT_DIR$/html2/html-ajax/ajax2.html" />
+        <option value="$PROJECT_DIR$/webzuoye/ceshi/button绝对定位测试.html" />
+        <option value="$PROJECT_DIR$/webzuoye/ceshi/ajajx上传图片测试.html" />
+        <option value="D:/phpStudy/WWW/updata.html" />
+        <option value="$PROJECT_DIR$/webzuoye/富文本编辑器/demo.html" />
+        <option value="$USER_HOME$/Desktop/umeditor1.2.3-utf8-php/index.html" />
+        <option value="$PROJECT_DIR$/webzuoye/富文本编辑器/utf8-php/demo.html" />
+        <option value="$USER_HOME$/Desktop/文件/web作业/第十二次作业/第十二次作业-富文本编辑器.html" />
+        <option value="$PROJECT_DIR$/webzuoye/富文本编辑器/umeditor1.2.3-utf8-php/demo.html" />
+        <option value="$USER_HOME$/Desktop/文件/web作业/第十二次作业/umeditor1.2.3-utf8-php/demo.html" />
+        <option value="$PROJECT_DIR$/HTML5/获取地理位置.html" />
+        <option value="$PROJECT_DIR$/学生管理系统/index.html" />
+        <option value="$PROJECT_DIR$/HTML5/特效/绚丽特效小球.html" />
+        <option value="$PROJECT_DIR$/HTML5/特效/粒子特效.html" />
+        <option value="$PROJECT_DIR$/HTML5/特效/重力点.html" />
+        <option value="$PROJECT_DIR$/webzuoye/第十三次作业/第十三次作业】.html" />
+        <option value="$PROJECT_DIR$/webzuoye/第十三次作业/search.php" />
+        <option value="$PROJECT_DIR$/webzuoye/简历.html" />
+        <option value="$PROJECT_DIR$/game/智能拼图/智能拼图2.html" />
+        <option value="$PROJECT_DIR$/webzuoye/ceshi/3.html" />
+        <option value="$PROJECT_DIR$/webzuoye/ceshi/2.html" />
+        <option value="$PROJECT_DIR$/webzuoye/ceshi/5.html" />
+        <option value="$PROJECT_DIR$/webzuoye/ceshi/4.html" />
+        <option value="$PROJECT_DIR$/webzuoye/ceshi/前进后退.html" />
+        <option value="$PROJECT_DIR$/留言板信息/index.html" />
+        <option value="$PROJECT_DIR$/留言板信息/homepage.html" />
+        <option value="$PROJECT_DIR$/留言板信息/login.html" />
+        <option value="$PROJECT_DIR$/webzuoye/ceshi/ss.html" />
+        <option value="$PROJECT_DIR$/nodejs/serve.js" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <annotation-enable>false</annotation-enable>
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
+  </component>
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="NodeModulesDirectoryManager">
+    <handled-path value="$PROJECT_DIR$/bootstrap/node_modules" />
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="333" />
+    <option name="y" value="19" />
+    <option name="width" value="774" />
+    <option name="height" value="733" />
+  </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>AngularJS</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="Scope" currentSubView="Project Files" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <expand>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="HTML" type="cbb8eebc:String" user="HTML" />
+            </path>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="HTML" type="cbb8eebc:String" user="HTML" />
+              <item name="bootstrap" type="cbb8eebc:String" user="bootstrap" />
+            </path>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="HTML" type="cbb8eebc:String" user="HTML" />
+              <item name="css" type="cbb8eebc:String" user="css" />
+            </path>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="HTML" type="cbb8eebc:String" user="HTML" />
+              <item name="echarts" type="cbb8eebc:String" user="echarts" />
+            </path>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="HTML" type="cbb8eebc:String" user="HTML" />
+              <item name="game" type="cbb8eebc:String" user="game" />
+            </path>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="HTML" type="cbb8eebc:String" user="HTML" />
+              <item name="html" type="cbb8eebc:String" user="html" />
+            </path>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="HTML" type="cbb8eebc:String" user="HTML" />
+              <item name="webzuoye" type="cbb8eebc:String" user="webzuoye" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scratches" />
+      <pane id="ProjectPane" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/node" />
+    <property name="HbShouldOpenHtmlAsHb" value="" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="FullScreen" value="false" />
+    <property name="options.lastSelected" value="configurable.group.language" />
+    <property name="options.splitter.main.proportions" value="0.3" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="LayoutCode.rearrangeEntriesHTML" value="false" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="recentsLimit" value="5" />
+    <property name="restartRequiresConfirmation" value="true" />
+    <property name="ToolWindowRun.ShowToolbar" value="false" />
+    <property name="settings.editor.selected.configurable" value="Settings.JavaScript" />
+    <property name="nodejs_interpreter_path" value="C:/Program Files/nodejs/node" />
+    <property name="JavaScriptPreferStrict" value="true" />
+    <property name="JavaScriptWeakerCompletionTypeGuess" value="false" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\HTML\留言板信息\source" />
+      <recent name="C:\HTML\webzuoye\ceshi" />
+      <recent name="C:\HTML\game\智能拼图" />
+      <recent name="C:\HTML\game\智能拼图\image" />
+      <recent name="C:\HTML\webzuoye\富文本编辑器" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\HTML\webzuoye\五，六，七，八】" />
+      <recent name="C:\HTML\HTML5\特效" />
+      <recent name="C:\HTML\webzuoye\富文本编辑器" />
+      <recent name="C:\HTML\webzuoye\富文本编辑器\utf8-php" />
+      <recent name="C:\HTML\webzuoye\ceshi" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Node.js.serve.js">
+    <configuration name="2.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="E:/nodejs/node" path-to-js-file="2.js" working-dir="$PROJECT_DIR$/nodejs">
+      <RunnerSettings RunnerId="Basic" />
+      <ConfigurationWrapper RunnerId="Basic" />
+    </configuration>
+    <configuration name="3.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="E:/nodejs/node" path-to-js-file="3.js" working-dir="$PROJECT_DIR$/nodejs">
+      <RunnerSettings RunnerId="Basic" />
+      <ConfigurationWrapper RunnerId="Basic" />
+    </configuration>
+    <configuration name="菜单第三次实验.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/新建文件夹/webzuoye/第三次实验/菜单第三次实验.html">
+      <RunnerSettings RunnerId="JavascriptDebugRunner" />
+      <ConfigurationWrapper RunnerId="JavascriptDebugRunner" />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <pass-parent-envs>true</pass-parent-envs>
+      <envs />
+    </configuration>
+    <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
+      <method />
+    </configuration>
+    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
+      <method />
+    </configuration>
+    <configuration default="true" type="JSTestDriver:ConfigurationType" factoryName="JsTestDriver">
+      <setting name="configLocationType" value="CONFIG_FILE" />
+      <setting name="settingsFile" value="" />
+      <setting name="serverType" value="INTERNAL" />
+      <setting name="preferredDebugBrowser" value="Chrome" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" config-file="">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" working-dir="">
+      <method />
+    </configuration>
+    <configuration default="true" type="cucumber.js" factoryName="Cucumber.js">
+      <option name="cucumberJsArguments" value="" />
+      <option name="executablePath" />
+      <option name="filePath" />
+      <method />
+    </configuration>
+    <configuration name="serve.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="E:/nodejs/node" path-to-js-file="serve.js" working-dir="$PROJECT_DIR$/nodejs">
+      <RunnerSettings RunnerId="Basic" />
+      <ConfigurationWrapper RunnerId="Basic" />
+    </configuration>
+    <configuration name="server2.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="C:/Program Files/nodejs/node" path-to-js-file="server2.js" working-dir="$PROJECT_DIR$/nodejs">
+      <RunnerSettings RunnerId="Basic" />
+      <ConfigurationWrapper RunnerId="Basic" />
+    </configuration>
+    <list size="5">
+      <item index="0" class="java.lang.String" itemvalue="Node.js.2.js" />
+      <item index="1" class="java.lang.String" itemvalue="Node.js.3.js" />
+      <item index="2" class="java.lang.String" itemvalue="Node.js.serve.js" />
+      <item index="3" class="java.lang.String" itemvalue="Node.js.server2.js" />
+      <item index="4" class="java.lang.String" itemvalue="JavaScript Debug.菜单第三次实验.html" />
+    </list>
+    <recent_temporary>
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="Node.js.serve.js" />
+        <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.菜单第三次实验.html" />
+        <item index="2" class="java.lang.String" itemvalue="Node.js.server2.js" />
+        <item index="3" class="java.lang.String" itemvalue="Node.js.3.js" />
+        <item index="4" class="java.lang.String" itemvalue="Node.js.2.js" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f4e3af82-f288-41c9-8179-17f92e94710b" name="Default" comment="" />
+      <created>1497963881913</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1497963881913</updated>
+      <workItem from="1510975941358" duration="1044000" />
+      <workItem from="1510986606715" duration="16699000" />
+      <workItem from="1511061561376" duration="777000" />
+      <workItem from="1511065458022" duration="1470000" />
+      <workItem from="1511093195384" duration="7163000" />
+      <workItem from="1511152426230" duration="960000" />
+      <workItem from="1511167473854" duration="9313000" />
+      <workItem from="1511239800941" duration="5994000" />
+      <workItem from="1511276120912" duration="7000" />
+      <workItem from="1511324190353" duration="3614000" />
+      <workItem from="1511330533237" duration="5764000" />
+      <workItem from="1511345682948" duration="12898000" />
+      <workItem from="1511410390172" duration="649000" />
+      <workItem from="1511413473089" duration="2104000" />
+      <workItem from="1511423563825" duration="4305000" />
+      <workItem from="1511430820912" duration="11467000" />
+      <workItem from="1511496990395" duration="3556000" />
+      <workItem from="1511510242415" duration="2515000" />
+      <workItem from="1511514653215" duration="1077000" />
+      <workItem from="1511517959892" duration="505000" />
+      <workItem from="1511527421142" duration="5036000" />
+      <workItem from="1511573310478" duration="718000" />
+      <workItem from="1511585421620" duration="441000" />
+      <workItem from="1511604427052" duration="11333000" />
+      <workItem from="1511621354021" duration="509000" />
+      <workItem from="1511656739595" duration="4662000" />
+      <workItem from="1511661570168" duration="11148000" />
+      <workItem from="1511769518090" duration="2743000" />
+      <workItem from="1511774358746" duration="25000" />
+      <workItem from="1511775059464" duration="6139000" />
+      <workItem from="1511789101397" duration="3631000" />
+      <workItem from="1511856892538" duration="1168000" />
+      <workItem from="1511865236096" duration="1936000" />
+      <workItem from="1511950661971" duration="5756000" />
+      <workItem from="1511959176029" duration="1030000" />
+      <workItem from="1512016169337" duration="841000" />
+      <workItem from="1512031331992" duration="3127000" />
+      <workItem from="1512040041486" duration="3054000" />
+      <workItem from="1512107860418" duration="5997000" />
+      <workItem from="1512266334160" duration="8248000" />
+      <workItem from="1512362114732" duration="1570000" />
+      <workItem from="1512381142624" duration="10895000" />
+      <workItem from="1512397255764" duration="592000" />
+      <workItem from="1512450975504" duration="13444000" />
+      <workItem from="1512473813460" duration="37000" />
+      <workItem from="1512474808202" duration="1111000" />
+      <workItem from="1512827942877" duration="1871000" />
+      <workItem from="1512830697100" duration="606000" />
+      <workItem from="1512872280951" duration="79000" />
+      <workItem from="1512988933579" duration="6488000" />
+      <workItem from="1513044315152" duration="2855000" />
+      <workItem from="1513065767909" duration="199000" />
+      <workItem from="1513507388540" duration="1859000" />
+      <workItem from="1513570896203" duration="1975000" />
+      <workItem from="1513647104791" duration="2122000" />
+      <workItem from="1514079347193" duration="12000" />
+      <workItem from="1514113340869" duration="618000" />
+      <workItem from="1514457959289" duration="3591000" />
+      <workItem from="1514466508199" duration="1161000" />
+      <workItem from="1514521168098" duration="214000" />
+      <workItem from="1514700913218" duration="621000" />
+      <workItem from="1514945555754" duration="1867000" />
+      <workItem from="1515116747780" duration="1481000" />
+      <workItem from="1515233347169" duration="6000" />
+      <workItem from="1515377313782" duration="6000000" />
+      <workItem from="1515415297997" duration="4579000" />
+      <workItem from="1515463165057" duration="5287000" />
+      <workItem from="1515546684337" duration="4542000" />
+      <workItem from="1515636654676" duration="1261000" />
+      <workItem from="1518522018669" duration="653000" />
+      <workItem from="1518591680325" duration="27000" />
+      <workItem from="1519089323022" duration="143000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="247189000" />
+  </component>
+  <component name="TodoView" selected-index="0">
+    <todo-panel id="selected-file">
+      <are-packages-shown value="false" />
+      <are-modules-shown value="false" />
+      <flatten-packages value="false" />
+      <is-autoscroll-to-source value="false" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="false" />
+      <are-modules-shown value="false" />
+      <flatten-packages value="false" />
+      <is-autoscroll-to-source value="false" />
+    </todo-panel>
+    <todo-panel id="default-changelist">
+      <are-packages-shown value="false" />
+      <are-modules-shown value="false" />
+      <flatten-packages value="false" />
+      <is-autoscroll-to-source value="false" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <layout>
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15812592" sideWeight="0.86771655" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21870047" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.8304279" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33534378" sideWeight="0.13228346" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32646593" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+      <collection />
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="2" />
+    </breakpoint-manager>
+    <watches-manager />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <PATH>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="新建文件夹" />
+        <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="HTML" />
+        <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+      </PATH_ELEMENT>
+    </PATH>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/source/bootstrap.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webzuoye/ceshi/upload.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="14" column="45" lean-forward="true" selection-start-line="14" selection-start-column="45" selection-end-line="14" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/phpStudy/WWW/updata.html" />
+    <entry file="file://$PROJECT_DIR$/webzuoye/ceshi/ajajx上传图片测试.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="532">
+          <caret line="28" column="37" lean-forward="false" selection-start-line="28" selection-start-column="37" selection-end-line="28" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bootstrap/bootstrap.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-8">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bootstrap/学生管理系统.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webzuoye/富文本编辑器/ueditor.config.js" />
+    <entry file="file://$PROJECT_DIR$/webzuoye/富文本编辑器/ueditor.all.min.js" />
+    <entry file="file://$PROJECT_DIR$/webzuoye/富文本编辑器/utf8-php/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webzuoye/富文本编辑器/utf8-php/demo.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="3" column="6" lean-forward="false" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/文件/web作业/第十二次作业/umeditor.config.js" />
+    <entry file="file://$USER_HOME$/Desktop/文件/web作业/第十二次作业/第十二次作业-富文本编辑器.html" />
+    <entry file="file://$PROJECT_DIR$/webzuoye/富文本编辑器/umeditor1.2.3-utf8-php/demo.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="239">
+          <caret line="18" column="24" lean-forward="true" selection-start-line="18" selection-start-column="24" selection-end-line="18" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/文件/web作业/第十二次作业/umeditor1.2.3-utf8-php/demo.html" />
+    <entry file="file://$PROJECT_DIR$/webzuoye/富文本编辑器/umeditor1.2.3-utf8-php/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="4" column="71" lean-forward="false" selection-start-line="4" selection-start-column="71" selection-end-line="4" selection-end-column="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/game/手机app声明.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HTML5/获取地理位置.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="798">
+          <caret line="42" column="12" lean-forward="false" selection-start-line="42" selection-start-column="12" selection-end-line="42" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HTML5/特效/重力点.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="34" column="0" lean-forward="true" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HTML5/特效/粒子特效.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="22" column="45" lean-forward="false" selection-start-line="22" selection-start-column="45" selection-end-line="22" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HTML5/特效/绚丽特效小球.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1197">
+          <caret line="63" column="8" lean-forward="false" selection-start-line="63" selection-start-column="6" selection-end-line="63" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webzuoye/第十三次作业/第十三次作业】.html" />
+    <entry file="file://$PROJECT_DIR$/webzuoye/第十三次作业/search.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="3" column="29" lean-forward="false" selection-start-line="3" selection-start-column="29" selection-end-line="3" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webzuoye/五，六，七，八】/简历.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="201">
+          <caret line="69" column="9" lean-forward="false" selection-start-line="69" selection-start-column="9" selection-end-line="69" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/game/打字游戏/打字游戏二.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/game/智能拼图/image/20171227_180717_01.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/game/智能拼图/智能拼图.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/game/智能拼图/智能拼图2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="66" column="41" lean-forward="false" selection-start-line="66" selection-start-column="41" selection-end-line="66" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webzuoye/ceshi/4.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="10" column="11" lean-forward="false" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webzuoye/ceshi/3.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="7" column="10" lean-forward="false" selection-start-line="7" selection-start-column="10" selection-end-line="7" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webzuoye/ceshi/2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="7" column="10" lean-forward="false" selection-start-line="7" selection-start-column="10" selection-end-line="7" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webzuoye/ceshi/5.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="3" column="26" lean-forward="false" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webzuoye/ceshi/前进后退.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="12" column="26" lean-forward="false" selection-start-line="12" selection-start-column="26" selection-end-line="12" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/留言板信息/source/bootstrap.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/留言板信息/source/bootstrap.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/留言板信息/source/jquery-3.2.1.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/学生管理系统/upload.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/学生管理系统/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1387">
+          <caret line="73" column="16" lean-forward="false" selection-start-line="73" selection-start-column="16" selection-end-line="78" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webzuoye/五，六，七，八】/登入页面.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="8" column="23" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="54" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webzuoye/五，六，七，八】/注册.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue/双向绑定.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue/vue.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2736">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue/信息录入系统.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-445">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/学生管理系统/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/留言板信息/homepage.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="53" column="68" lean-forward="false" selection-start-line="53" selection-start-column="68" selection-end-line="53" selection-end-column="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/留言板信息/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="49">
+          <caret line="34" column="25" lean-forward="false" selection-start-line="34" selection-start-column="25" selection-end-line="34" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/留言板信息/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="38" column="24" lean-forward="false" selection-start-line="38" selection-start-column="24" selection-end-line="38" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webzuoye/ceshi/ss.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="62" column="20" lean-forward="false" selection-start-line="62" selection-start-column="20" selection-end-line="62" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nodejs/1.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nodejs/2.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nodejs/server2.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nodejs/serve.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="6" column="41" lean-forward="false" selection-start-line="6" selection-start-column="41" selection-end-line="6" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

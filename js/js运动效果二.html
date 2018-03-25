@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #aa{
+            width: 100px;
+            height: 100px;
+            border-radius:50%;
+            background-color: red;
+            position:absolute;
+            left: 0;
+            top: 0;
+        }
+    </style>
+    <script>
+        window.onload=function(){
+            var aa=document.getElementById("aa");
+            var timer;
+            var speedX=speedY=2;
+            function start(){
+                var maxL=document.documentElement.clientWidth-aa.offsetWidth;
+                var maxT=document.documentElement.clientHeight-aa.offsetHeight;
+                timer=setInterval(function(){
+                    var oldL=aa.offsetLeft;
+                    var oldT=aa.offsetTop;
+                    if(oldL>maxL||oldL<0){
+                        speedX*=(-1);
+                    }
+                    if(oldT>maxT||oldT<0){
+                        speedY*=(-1);
+                    }
+                    var newL=oldL+speedX;
+                    var newH=oldT+speedY;
+                    aa.style.left=newL+'px';
+                    aa.style.top=newH+'px';
+                },10)
+            }
+            start();
+            window.onresize = function(){
+                aa.style.left=0+'px';
+                aa.style.top=0+'px';
+            }
+            aa.onmouseover=function(){
+                clearInterval(timer);
+            }
+            aa.onmouseout=function(){
+                start();
+            }
+        }
+    </script>
+</head>
+<body>
+    <div id="aa"></div>
+</body>
+</html>

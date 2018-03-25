@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        video{
+            width: 500px;
+            display: block;
+            margin: 50px auto;
+        }
+       #control{
+           width: 400px;
+           height: 50px;
+           margin: 10px auto;
+           border: 1px solid #000;
+       }
+    </style>
+    <script>
+        window.onload=function(){
+            var v=document.getElementById("video");
+            var btn=document.getElementById("btn");
+            var forward=document.getElementById("forward");
+            var btn2=document.getElementById("btn2");
+            var yinLian=document.getElementById("yinLian");
+            var num=document.getElementById("num");
+            btn.onclick=function(){
+//                开始播放方法
+                v.play();
+            }
+            btn2.onclick=function(){
+//                暂停播放
+                v.pause();
+            }
+            yinLian.onchange=function(){
+                num.innerHTML=this.value;
+                v.volume=this.value/10;
+//                改变音量
+            }
+            //调节播放位置，谷歌失效，谷歌只支持服务器上的视频
+            forward.onclick=function(){
+                var time=v.currentTime;
+                var new_time=time+2;
+                v.currentTime=new_time;
+            }
+        }
+    </script>
+</head>
+<body>
+<div id="control">
+    <input type="button" id="btn" value="开始播放"/>
+    <input type="button" id="btn2" value="暂停播放"/>
+    <input type="range" id="yinLian" min="0" max="10" value="10"/><span id="num">10</span>
+    <input type="button" id="forward" value="快进"/>
+</div>
+    <video src="../video/aa.mp4" id="video"></video>
+</body>
+</html>

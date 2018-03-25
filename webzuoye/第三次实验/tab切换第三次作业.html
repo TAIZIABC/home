@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #aa{
+            width: 600px;
+            height: 500px;
+            margin: 100px auto;
+            background-color: blue;
+            position: relative;
+        }
+        li{
+            width: 200px;
+            line-height: 40px;
+            text-align: center;
+            font-size: 25px;
+            background-color: red;
+            list-style: none;
+            float: left;
+        }
+        #aa div{
+            width: 600px;
+            height: 460px;
+            font-size: 20px;
+            display: none;
+            overflow: auto;
+            position: absolute;
+            top: 40px;
+            left: 0;
+        }
+    </style>
+    <script>
+        window.onload=function(){
+            var aa=document.getElementById("aa");
+            var lis=aa.getElementsByTagName("li");
+            var div=aa.getElementsByTagName("div");
+            for(var i=0;i<lis.length;i++){
+                lis[i].index=i;
+                lis[i].onmouseover=function(){
+                    for(var i=0;i<lis.length;i++){
+                        lis[i].style.backgroundColor="red";
+                        div[i].style.display="none";
+                    }
+                    this.style.backgroundColor="green";
+                    div[this.index].style.display="block";
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <div id="aa">
+        <ul>
+            <li style="background: green">北京</li>
+            <li>上海</li>
+            <li>赣州</li>
+        </ul>
+        <div style="display: block">北京，简称“京”，是中华人民共和国的首都、直辖市、国家中心城市、超大城市、国际大都市，全国政治中心、文化中心、国际交往中心、科技创新中心，是中国共产党中央委员会、中华人民共和国中央人民政府、全国人民代表大会、中国人民政治协商会议全国委员会、中华人民共和国中央军事委员会所在地，是中部战区司令部驻地。
+            北京位于华北平原北部，背靠燕山，毗邻天津市和河北省。北京的气候为典型的北温带半湿润大陆性季风气候。
+            北京是首批国家历史文化名城和世界上拥有世界文化遗产数最多的城市，三千多年的历史孕育了故宫、天坛、八达岭长城、颐和园等众多名胜古迹。早在七十万年前，北京周口店地区就出现了原始人群部落“北京人”。公元前1045年，北京成为蓟、燕等诸侯国的都城。公元938年以来，北京先后成为辽陪都、金中都、元大都、明清国都。1949年10月1日成为中华人民共和国首都。</div>
+        <div>上海，简称“沪”或“申”，是中华人民共和国直辖市，国家中心城市，超大城市，中国的经济、交通、科技、工业、金融、贸易、会展和航运中心，首批沿海开放城市。上海地处长江入海口，是长江经济带的龙头城市，隔东中国海与日本九州岛相望，南濒杭州湾，北、西与江苏、浙江两省相接。[1-3]
+            春秋战国时期，上海是楚国春申君黄歇的封邑，故别称申。四、五世纪晋朝时期，因渔民创造捕鱼工具“扈”，江流入海处称“渎”，因此松江下游一带称为“扈渎”，以后又改“沪”，故上海简称沪。[4-5]  唐朝置华亭县。上海是国家历史文化名城，拥有深厚的近代城市文化底蕴和众多历史古迹。江浙吴越文化与西方传入的工业文化相融合形成上海特有的海派文化。[6-7]  1843年后上海成为对外开放的商埠并迅速发展成为远东第一大城市。</div>
+        <div>赣州，江西省省辖市，简称“虔”，别称“虔城”，也称“赣南”，位于江西省南部，是江西省的南大门，是江西省面积最大、人口最多的地级市。
+            赣州是江西省省域副中心城市，拥有4个国家级开发区和1个综合保税区。赣州是全国稀有金属产业基地和先进制造业基地、原中央苏区振兴发展示范区、红色文化传承创新区和著名的红色旅游目的地。赣州是中国区域性综合交通枢纽、赣粤闽湘四省通衢的区域性现代化中心城市。赣州都市区是江西省重点培育和发展的三大都市区之一。</div>
+    </div>
+</body>
+</html>

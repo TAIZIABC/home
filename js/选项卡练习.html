@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>选项卡练习</title>
+    <script>
+        window.onload = function()
+        {
+            var oDiv = documnent.getElementsByTagName('div');
+            var oBut = oDiv.getElementsByTagName('input');
+            var oTea = documnent.getElementById('tea');
+            alert("dsad");
+            for(var i=0;i<oBut.length;i++)
+            {
+
+                oBut[i].onclick = function()
+                {
+                    for(var j=0;j<oBut.length;j++)
+                    {
+                        oBut[j].className = " ";
+                    }
+                    this.className = "aa";
+                     alert("this.value");
+                }
+            }
+        }
+    </script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        input{
+                margin-right: 20px;
+            }
+        .aa{
+            background-color: yellow;
+        }
+        input{
+            width: 50px;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <input type="button" id="bu1" value="A" class="aa"/>
+    <input type="button" id="bu2" value="B" />
+    <input type="button" id="bu3" value="C" /> <br/>
+</div>
+<textarea name="sdsa" id="tea" cols="30" rows="10"></textarea>
+</body>
+</html>

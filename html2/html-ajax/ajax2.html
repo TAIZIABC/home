@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="../../source/jquery-3.2.1.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(".one").click(function(){
+                xhr = $.ajax({
+                    type:"GET",
+                    url:"a.txt",
+                    async: true,
+                    success:function(){
+                        $("#div").html(xhr.responseText);
+
+                    },
+                    error:function(){
+                        alert("请求失败");
+                    }
+                });
+            });
+
+            $(".two").click(function(){
+                xhr = $.ajax({
+                    type:"POST",
+                    url:"b.html",
+                    async:"true",
+                    success:function(){
+                        $("#div").html(xhr.responseText);
+                    },
+                    error:function(){
+                        alert("请求失败");
+                    }
+                });
+            });
+            $(".three").click(function(){
+                xhr = $.ajax({
+                    type:"GET",
+                    url:"c.html",
+                    async:"true",
+                    success:function(){
+                        $("#div").html(xhr.responseText);
+                    },
+                    error:function(){
+                        alert("请求失败");
+                    }
+                });
+            });
+            $(".four").click(function(){
+                xhr = $.ajax({
+                    type:"GET",
+                    url:"d.html",
+                    async:"false",
+                    success:function(){
+                        $("#div").html(xhr.responseText);
+                    },
+                    error:function(){
+                        alert("请求失败");
+                    }
+                });
+            });
+        });
+    </script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        a{
+            text-decoration: none;
+        }
+        ul,li{
+            list-style: none;
+        }
+        ul{
+            width: 404px;
+            overflow: hidden;
+        }
+        li{
+            width: 100px;
+            float: left;
+            text-align: center;
+            margin-right: 1px;
+            background: #cccccc;
+        }
+        div{
+            width: 400px;
+            height: 300px;
+            margin-top: 4px;
+            border: 1px solid #000;
+        }
+    </style>
+</head>
+<body>
+<ul id="uu">
+    <li class="one"><a href="#">A</a></li>
+    <li class="two"><a href="#">B</a></li>
+    <li class="three"><a href="#">C</a></li>
+    <li class="four"><a href="#">D</a></li>
+</ul>
+<div id="div"></div>
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #aa{
+            width: 800px;
+            height: 800px;
+            margin: 20px auto;
+            overflow: hidden;
+            position: relative;
+        }
+        #bb{
+            width: 4800px;
+            height: 800px;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        #bb li{
+            list-style: none;
+            width: 800px;
+            height: 800px;
+            float: left;
+        }
+        #cc{
+            width: 120px;
+            height: 8px;
+            position: absolute;
+            left: 330px;
+            bottom: 60px;
+        }
+        #cc li{
+            list-style: none;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            float: left;
+            background-color: red;
+            margin-right: 4px;
+        }
+    </style>
+    <script src="../source/jquery-3.2.1.js"></script>
+    <script>
+        $(function(){
+            var c=0;
+            var time;
+            function run(){
+                c++;
+                if(c==6) {
+                    $("#bb").css({left: "0"});
+                    c = 1;
+                }
+                if(c==5){
+                    $("#cc li").eq(0).css({backgroundColor:'white'}).siblings("li").css({backgroundColor:'red'});
+                }
+                var lt=c*(-800);
+                $("#bb").stop().animate({left:lt},1000);
+                $("#cc li").eq(c).css({backgroundColor:'white'}).siblings("li").css({backgroundColor:'red'})
+            }
+            var timer=setInterval(run,1500);
+            $("#cc li").mouseenter(function(){
+                clearInterval(timer);
+                var jqThis=$(this);
+                time=setTimeout(function(){
+                    c=jqThis.index();
+                    var lt=c*(-800);
+                    $("#bb").stop().animate({left:lt},500);
+                    $("#cc li").eq(c).css({backgroundColor:'white'}).siblings("li").css({backgroundColor:'red'})
+                },200)
+            }).mouseleave(function(){
+                clearTimeout(time);
+                timer=setInterval(run,2000);
+            })
+        })
+    </script>
+</head>
+<body>
+<div id="aa">
+    <ul id="bb">
+        <li><img src="../images/tab1.jpg"/></li>
+        <li><img src="../images/tab2.jpg" /></li>
+        <li><img src="../images/tab3.jpg" /></li>
+        <li><img src="../images/tab4.jpg" /></li>
+        <li><img src="../images/tab5.jpg" /></li>
+        <li><img src="../images/tab1.jpg"/></li>
+    </ul>
+    <ul id="cc">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</div>
+</body>
+</html>

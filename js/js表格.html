@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        .aa {
+            background: blue;
+        }
+    </style>
+    <script>
+        var rows=prompt("请输入行数：");
+        var cols=prompt("请输入列数：");
+        document.write("<table border='1px'>");
+        for(var m=1;m<=rows;m++){
+            if(m%2==1){
+                document.write("<tr>");
+            }else{
+                document.write("<tr class='aa'>");
+            }
+
+            for(var n=1;n<=cols;n++){
+                document.write("<td>");
+                document.write(m+"行"+n+"列");
+                document.write("</td>");
+            }
+            document.write("<tr>");
+        }
+        document.write("</table>");
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

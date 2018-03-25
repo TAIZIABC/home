@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ECharts.js 数据绑定</title>
+    <meta charset="utf-8">
+    <script type="text/javascript" src="echarts.min.js"></script>
+    <script type="text/javascript" src="../source/jquery-3.2.1.js"></script>
+</head>
+<body>
+<div id="chartmain" style="width:600px; height: 400px;"></div>
+<script type="text/javascript">
+    //初始化echarts实例
+    var myChart = echarts.init(document.getElementById('chartmain'));
+    //异步加载的配置项和数据显示图表
+    $.get('data.json').done(function (data) {
+        data = eval('('+data+')');
+        myChart.setOption({
+            title:{
+                text:'ECharts 异步加载数据'
+            },
+            tooltip:{},
+            legend:{
+                data:['访问量']
+            },
+            xAxis:{
+                data:data.name
+            },
+            yAxis:{},
+            series:[
+                {
+                    name:'访问量',
+                    type:'bar',
+                    data:data.data
+                }
+            ]
+        })
+    })
+</script>
+</body>

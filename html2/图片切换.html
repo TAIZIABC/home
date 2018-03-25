@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+        var i = 0;
+            function  demo(){
+                if(i<4){
+                    i++;
+                    document.getElementById("im").src = "../images/gd"+i+".jpg";
+                }
+
+            }
+            function  demo2(){
+                if(i>0) {
+                    i--;
+                    document.getElementById("im").src = "../images/gd" + i + ".jpg";
+                }
+            }
+    </script>
+</head>
+<body>
+
+<img src="../images/gd0.jpg" id="im"/><br/>
+<button  onclick="demo()">下一张</button>
+<span style="width: 280px;display: inline-block" ></span>
+<button  onclick="demo2()">上一张</button>
+</body>
+</html>

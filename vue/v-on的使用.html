@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v-on="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+   <div id="aa">
+        <!--<button @click="run()">按钮</button>-->
+        <button v-on:click="run()">按钮1</button>
+        <button v-on:click="start()">按钮2</button>
+    </div>
+    <script src="vue.js"></script>
+    <script>
+        new Vue({
+            el:"#aa",
+            data:{
+                message:"hello world!"
+            },
+            methods:{
+               run:function(){
+                   alert("aaa")
+               },
+                start:function(){
+                   alert("点击了");
+                }
+            }
+        })
+    </script>
+</body>
+</html>

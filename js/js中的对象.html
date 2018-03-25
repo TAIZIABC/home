@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+//        原生js创建对象
+        var Student={
+            'name':'张三',
+            'age':'19',
+            'height':'175',
+            'weight':'50kg'
+        };
+        document.write(Student.age+"<br>");
+        Student.age=22;
+        Student.class="网络151"
+        document.write(Student.age+"&emsp;"+Student.class);
+        document.write("<br>");
+
+//        用构造函数创建对象
+        function Student2(){
+            this.school="江西理工";
+            this.class="大三";
+            this.sex="男";
+            this.age=19;
+        }
+        var zs=new Student2();
+//        document.write(zs.age);
+//        将对象中的属性全部输出
+        for(x in Student){
+            document.write(x+'->'+Student[x]+'<br/>');
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

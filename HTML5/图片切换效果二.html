@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #div{
+            width: 800px;
+            height: 2000px;
+            position: relative;
+            margin:0 auto;
+        }
+        #aa,#cc{
+            width: 800px;
+            height: 800px;
+            position: fixed;
+            left: 275px;
+            overflow: hidden;
+        }
+        #bb,#dd{
+            width: 800px;
+            height: 800px;
+        }
+        .bb{
+            background-image: url("../images/tab1.jpg");
+        }
+        .dd{
+            background-image: url("../images/tab2.jpg");
+        }
+
+    </style>
+    <script>
+        window.onload=function(){
+            var cc=document.getElementById("cc");
+            var dd=document.getElementById("dd");
+            var aa=document.getElementById("aa");
+            var bb=document.getElementById("bb");
+            var star=1;
+            window.onscroll=function(){
+                var high=document.documentElement.scrollTop;
+                var re=800-high;
+                if(re<=0){
+                    re=0;
+                }
+                if(re<=0){
+                    bb.className="dd";
+                    dd.className="bb";
+                    cc.style.height=800+'px';
+                    star=0;
+                }
+                if(star==1) {
+                    cc.style.height=re+'px';
+                }
+                if(star==0){
+                    cc.style.height=high+'px';
+                }
+                if(re==800){
+                    bb.className="bb";
+                    dd.className="dd";
+                    cc.style.height=800+'px';
+                    star=1;
+                }
+            }
+        }
+    </script>
+<body>
+<div id="div">
+    <div id="aa">
+        <div id="bb" class="bb"></div>
+    </div>
+    <div id="cc">
+        <div id="dd" class="dd"></div>
+    </div>
+
+</body>
+</html>

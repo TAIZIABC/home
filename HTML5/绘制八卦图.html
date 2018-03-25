@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #canvas{
+            background-color: #0e1223;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="canvas" width="1366" height="500"></canvas>
+    <script>
+        var cv=document.getElementById("canvas").getContext("2d");
+//        绘制左半圆
+        cv.beginPath();
+        cv.arc(600,250,200,Math.PI/2,Math.PI*1.5);
+        cv.fillStyle="black";
+        cv.fill();
+
+//        绘制右半圆
+        cv.beginPath();
+        cv.arc(600,250,200,Math.PI*1.5,Math.PI/2);
+        cv.fillStyle="white";
+        cv.fill();
+
+//        绘制上半圆
+        cv.beginPath();
+        cv.arc(600,150,100,Math.PI*1.5,Math.PI*0.5);
+        cv.fillStyle="black";
+        cv.fill();
+//        绘制下半圆
+        cv.beginPath();
+        cv.arc(600,350,100,Math.PI*0.5,Math.PI*1.5);
+        cv.fillStyle="white";
+        cv.fill();
+//        绘制上小圆
+        cv.beginPath();
+        cv.arc(600,150,20,0,Math.PI*2);
+        cv.fillStyle="white";
+        cv.fill();
+//        绘制下小圆
+        cv.beginPath();
+        cv.arc(600,350,20,0,Math.PI*2);
+        cv.fillStyle="black";
+        cv.fill();
+    </script>
+</body>
+</html>

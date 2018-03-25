@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #btn{
+            width: 150px;
+            height: 35px;
+            margin-left: 50%;
+            margin-top: 100px;
+            margin-bottom: 25px;
+        }
+        #bb{
+            width: 400px;
+            height: 300px;
+            border: 1px solid #000;
+            margin:0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+    </style>
+    <script src="../source/jquery-3.2.1.js"></script>
+    <script>
+        $(function(){
+            $("#btn").click(function(){
+                var obj='<h2>dsadsa</h2>';
+                var con='<a href="http://baidu.com">百度</a>';
+//                $("#bb").html(con);//重新设置内容
+//                $("#bb").append(con);   //从尾部追加元素
+//                    $(con).appendTo($("#bb"));
+//                $("#bb").prepend(con);      //从前面插入
+                $(con).prependTo("#bb");
+            })
+        })
+    </script>
+</head>
+<body>
+    <button id="btn">按钮</button>
+    <div id="bb">
+        <h1 class="aa">江西理工1</h1>
+
+        <h1>江西理工2</h1>
+
+        <h1>江西理工3</h1>
+
+        <h1>江西理工4</h1>
+
+        <h1>江西理工5</h1>
+    </div>
+</body>
+</html>

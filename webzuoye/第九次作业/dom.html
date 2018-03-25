@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>无标题页</title>
+</head>
+<body id="mybody" bgcolor="#FFFFCC">
+<h4 id="myH" align="center">this is a text</h4>
+<p id="myP" align="center"><b>段落文本</b></p>
+<table id="myT" bgcolor="yellow" align="center" border="1">
+    <caption id="myCaption">
+        DOM 树结点示例</caption>
+    <tr id="tr1">
+        <td style="width:100px">table(1,1)</td>
+        <td id="myid" style="width: 100px"></hr></td>
+        <td style="width: 100px">table(1,3)</td>
+    </tr>
+    <tr id="tr2">
+        <td style="width:100px">
+            <div id="oDiv" align="center" onclick="alert('click');"
+                 onmouseover="this.style.color='#0000FF';"
+                 onmouseout="this.style.color='#FF0000';">I am a Div</div>
+        </td>
+        <td style="width: 100px"><img src="ad1.jpg"/></td>
+        <td style="width: 100px">table(2,3)</td>
+    </tr>
+    <tr id="tr3">
+        <td style="width:100px">table(3,1)&nbsp;</td>
+        <td style="width:100px">table(2,3)</td>
+    </tr>
+</table>
+<script type="text/javascript">
+    function fun_click(){
+        document.getElementById("mybutton").style.backgroundColor="blue";
+        alert("yes,that's me");
+    }
+
+    function dom_example(){
+        var nod1=document.createElement("<input type='text'>");
+        nod1.setAttribute("value","I am a Text");
+        myP.insertBefore(nod1);
+        var nod2=document.createElement("<div style='backgroundColor:red;'>");
+        nod2.setAttribute("id","mydiv");
+        document.body.insertBefore(nod2);
+        mydiv.innerText="I am a created DIV";
+        //创建一个按钮
+        var nod3=document.createElement("<input type='button' value='click me' id='mybutton'>");
+        var mybutton=mydiv.appendChild(nod3);
+        //为该按钮添加一个click事件处理函数
+        mybutton.attachEvent("onclick",fun_click);
+        //3.对ID为myT的table所设置的所有属性进行循环，读取并显示出来
+        for (var i = 0; i <myT.attributes.length; i++) {
+            if(myT.attributes[i].specified){
+                alert(myT.attributes[i].nodeName+"="+myT.attributes[i].nodeValue);
+            }
+        }
+
+
+        //4.将表格id为tr1的第一行和id为tr2的第行进行交换
+        tr1.swapNode(tr2);
+
+        //5.将id为myH的标题文本换成另外一个结点（前面创建的node2或mydiv）
+        myH.replaceNode(nod2);
+
+        //6.将oDiv的属性复制给第二步中创建的元素mydiv,但ID属性不复制。将鼠标在mydiv上移动将会发现事件属性也被复制
+        mydiv.mergeAttributes(oDiv,true);
+        if(tr3.hasChildNodes()){
+            alert('firstChild='+tr3.firstChild.innerHTML);
+            alert('lastChild='+tr3.lastChild.innerHTML);
+            for(i=0;i<tr3.childNodes.length;i++){
+                var myrow=tr3.childNodes(i);
+                alert(myrow.innerHTML);
+                if(i==0)alert(myrow.nextSibling.innerHTML);
+                if(i==tr3.childNodes.length-1)
+                    myrow.innerHTML="<a href='#'>I am a Hyperlink</a>";
+            }
+        }
+</script>
+</body>
+<ml>

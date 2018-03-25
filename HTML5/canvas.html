@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        #can{
+            width: 400px;
+            height: 300px;
+            border: 1px solid #000;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="can"></canvas>
+    <script>
+        window.onload=function(){
+            var can=document.getElementById("can");
+            var cs=can.getContext("2d");
+//            fillRect(x, y, width, height) 绘制一个填充的矩形
+//            cs.fillRect(50,50,100,50);
+//            clearRect(x, y, width, height)  清除指定矩形区域，让清除部分完全透明。
+//            cs.clearRect(50,50,50,50);
+//            绘制三角形
+            cs.beginPath();
+            cs.strokeStyle="yellow";
+            cs.lineWidth=5;
+//            设置拐点样式        round圆形     miter默认     bevel 平线
+            cs.lineJoin="miter";
+            cs.moveTo(50,50);
+            cs.lineTo(50,100);
+            cs.lineTo(100,100);
+            cs.closePath();
+            cs.stroke();
+
+
+        }
+    </script>
+</body>
+</html>

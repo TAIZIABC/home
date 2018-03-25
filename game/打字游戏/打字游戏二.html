@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #hid{
+            text-align: center;
+            font-size: 50px;
+            display: none;
+        }
+        ul{
+            width: 60%;
+            margin-top: 100px;
+            margin-left: 400px;
+            overflow: hidden;
+        }
+        li{
+            list-style: none;
+            font-size: 100px;
+            font-weight: 700;
+            margin-left: 20px;
+            float: left;
+        }
+        #start{
+            width: 200px;
+            height: 40px;
+            border-radius: 10px;
+            margin-left: 530px;
+            margin-top: 45px;
+        }
+    </style>
+    <script>
+        window.onload=function(){
+            var uu=document.getElementById('uu');
+            var li=uu.getElementsByTagName('li');
+            var hid=document.getElementById("hid");
+            var Time=document.getElementById("Time");
+            var btn=document.getElementById("start");
+            var arr= ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'];
+            function start(){
+                var score=0;
+                var time=60;
+                window.onkeydown=function(e){
+                    var num=parseInt(Math.random()*10);
+                    var word= String.fromCharCode(e.keyCode);//将键盘码转化成字符串
+                        if(word==li[0].innerHTML){
+                            score++;
+                            uu.removeChild(li[0]);
+                            var aa=document.createElement("li");
+                            aa.innerHTML=arr[num];
+                            uu.appendChild(aa);
+                        }
+                }
+                var timer=setInterval(function(){
+                    time--;
+                    Time.innerHTML=time;
+                    if(time==0){
+                        clearInterval(timer);
+                        alert("你的得分是："+score);
+                        btn.style.display="block";
+                        return 0;
+                    }
+                },1000);
+            }
+            btn.onclick=function(){
+                hid.style.display="block";
+                btn.style.display="none";
+                start();
+            }
+        }
+    </script>
+</head>
+<body>
+<p id="hid" style="">剩余时间：<span id="Time"></span></p>
+<ul id="uu">
+    <li>A</li>
+    <li>B</li>
+    <li>C</li>
+    <li>D</li>
+    <li>E</li>
+</ul>
+<div>
+    <button id="start">开始游戏</button>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #cav{
+            border: 1px solid #000;
+            width: 356px;
+            height: 482px;
+            margin: 20px  170px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        body{
+            background-color: #ccc;
+        }
+        #cav img{
+            height: 156px;
+        }
+        input{
+            width: 120px;
+            height: 40px;
+            margin-left:50px;
+            margin-bottom: 100px;
+            border-radius: 4px;
+            background: linear-gradient(to right,#4cae4c,green);
+        }
+        h1{
+            margin-top: 40px;
+        }
+        #fa{
+            position: absolute;
+            left: 850px;
+            top: 0;
+            width: 460px;
+            height: 482px;
+            background: url("ysy/ysy_00.jpg");
+            background-size: cover;
+        }
+        div.btn-group{
+            width: 200px;
+            position: absolute;
+            left: 600px;
+            top: 90px;
+        }
+    </style>
+    <script>
+        window.onload=function(){
+//            获取图片元素
+            var img=document.getElementsByTagName("img");
+            var reset=document.getElementById("reset");
+            var arr=['ch/ch_01.jpg','ch/ch_02.jpg','ch/ch_03.jpg','ch/ch_04.jpg','ch/ch_05.jpg','ch/ch_06.jpg','ch/ch_07.jpg','ch/ch_08.jpg','ch/ch_09.jpg'];
+            reset.onclick=run;
+
+//            打乱数组
+            run();
+            function run() {
+                arr2=arr.sort(function(){ return 0.5 - Math.random() });
+                var stat=1;
+                for(var i=0;i<img.length;i++) {
+                    img[i].src = arr2[i];
+                    img[i].onclick = function () {
+                        if (this.getAttribute('src') != 'images/aa.png') {
+                            var x = arr2.indexOf(this.getAttribute('src'), 0);
+                            var y = arr2.indexOf('images/aa.png', 0);
+
+                            if ((x-y==1||x-y==-1||x-y ==3||x-y==-3)&&(x*y!=6&&x*y!=30)){
+                                var t = arr2[x];
+                                arr2[x] = arr[y];
+                                arr2[y] = t;
+                                for (var i = 0; i < arr2.length; i++) {
+                                    img[i].src = arr2[i];
+                                }
+                                for(var i=0;i<arr2.length;i++){
+//                            stat=1;
+                                    if(arr2[i]!=arr[i]) {
+                                        stat=0;
+                                        break;
+                                    }
+                                }
+                                if(stat==0){
+                                    return alert("恭喜");
+                                }
+                            }
+
+                        }
+                    }
+                }
+            }
+        }
+
+    </script>
+</head>
+<body>
+<h1><center>拼图游戏</center></h1>
+<!--<div class="btn-group">-->
+    <!--<input type="button" id="reset" value="重新开始">-->
+    <!--<input type="button" id="start" value="开始游戏">-->
+    <!--<input type="button" id="exit" value="退出游戏">-->
+<!--</div>-->
+
+<div style="position: relative">
+    <div id="cav">
+        <img src="ysy/CD65B5BD2C3471CECD502BFFCDD82535_05.jpg" >
+        <img src="ysy/CD65B5BD2C3471CECD502BFFCDD82535_06.jpg" >
+        <img src="ysy/CD65B5BD2C3471CECD502BFFCDD82535_04.jpg" >
+        <img src="ysy/CD65B5BD2C3471CECD502BFFCDD82535_01.jpg" >
+        <img src="ysy/CD65B5BD2C3471CECD502BFFCDD82535_08.jpg" >
+        <img src="ysy/CD65B5BD2C3471CECD502BFFCDD82535_09.jpg" >
+        <img src="ysy/CD65B5BD2C3471CECD502BFFCDD82535_02.jpg" >
+        <img src="ysy/CD65B5BD2C3471CECD502BFFCDD82535_07.jpg" >
+        <img src="ysy/CD65B5BD2C3471CECD502BFFCDD82535_03.jpg" >
+    </div>
+    <div id="fa"></div>
+</div>
+</body>
+</html>

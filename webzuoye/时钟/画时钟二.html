@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <canvas id="cav" width="1000" height="600"></canvas>
+    <script>
+        var cav=document.getElementById("cav");
+        var cas=cav.getContext("2d");
+        timer=setInterval(run,1000);
+        function run(){
+
+            cas.clearRect(0,0,1000,600);
+
+            var date=new Date();
+            var hour=date.getHours();
+            var minute=date.getMinutes();
+            var second=date.getSeconds();
+
+            cas.font="20px 微软雅黑";
+            var str=hour+":"+minute+":"+second;
+            cas.fillText(str,560,150);
+
+
+            hour=hour+minute/60;
+            hour=hour>12?hour-12:hour;
+
+            cas.save();
+            cas.strokeStyle='blue';
+            cas.lineWidth=4;
+            cas.beginPath();
+            cas.arc(600,250,200,0,Math.PI*2);
+            cas.stroke();
+            cas.closePath();
+            cas.restore();
+
+            cas.save();
+            cas.translate(600,250);
+            for(var i=0; i<60; i++){
+                if(i%5 == 0){
+                    cas.beginPath();
+                    cas.moveTo(0,-198);
+                    cas.lineTo(0,-190);
+                    cas.lineWidth = 5;
+                    cas.strokeStyle = "green";
+                    cas.stroke();
+                    cas.rotate(Math.PI/30);
+                }else{
+                    cas.beginPath();
+                    cas.moveTo(0,-198);
+                    cas.lineTo(0,-190);
+                    cas.lineWidth = 1;
+                    cas.strokeStyle = "black";
+                    cas.stroke();
+                    cas.rotate(Math.PI/30);
+                }
+
+            }
+            cas.restore();
+//            秒钟
+            cas.save();
+            cas.translate(600,250);
+            cas.beginPath();
+            cas.lineWidth=3;
+            cas.strokeStyle='red';
+            cas.rotate(second*Math.PI/30);
+            cas.moveTo(0,-180);
+            cas.lineTo(0,15);
+            cas.stroke();
+            cas.closePath();
+            cas.restore();
+//            分钟
+            cas.save();
+            cas.translate(600,250);
+            cas.beginPath();
+            cas.lineWidth=4;
+            cas.strokeStyle='blue';
+            cas.rotate(minute*Math.PI/30);
+            cas.moveTo(0,-160);
+            cas.lineTo(0,15);
+            cas.stroke();
+            cas.closePath();
+            cas.restore();
+//            时钟
+            cas.save();
+            cas.translate(600,250);
+            cas.beginPath();
+            cas.lineWidth=5;
+            cas.strokeStyle='#B2AA0E';
+            cas.rotate(hour*Math.PI/6);
+            cas.moveTo(0,-120);
+            cas.lineTo(0,15);
+            cas.stroke();
+            cas.closePath();
+            cas.restore();
+        }
+
+    </script>
+</body>
+</html>

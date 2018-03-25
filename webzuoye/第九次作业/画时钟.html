@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1 id="time" style="text-align: center"></h1>
+    <canvas id="can" width="1300" height="600"></canvas>
+    <script>
+        var cav=document.getElementById("can").getContext("2d");
+        var time=document.getElementById("time");
+        cav.fillStyle='white';
+        cav.fillRect(0,0,1300,600);
+
+//        改变画布的坐标原点
+        cav.translate(600,300);
+//        画图片表盘
+        var img=new Image();
+        img.src='clock.jpg';
+
+        var date,hour,hour1,minute,seconds;
+        function draw() {
+            cav.drawImage(img,-200,-200,400,400);
+                date = new Date();
+                hour = date.getHours();
+                hour1 = date.getHours();
+                minute = date.getMinutes();
+                seconds = date.getSeconds();
+
+
+//                显示的时间
+                cav.font="20px 微软雅黑";
+                var str=hour1+":"+minute+":"+seconds;
+                cav.fillText(str,-35,-60);
+
+
+                hour=hour+minute/60;
+                hour=hour>12?hour-12:hour;
+
+//                各时钟旋转的角度
+                var hDeg = hour * 30 * Math.PI / 180;
+                var mDeg = minute * Math.PI / 30;
+                var sDeg = seconds * Math.PI / 30;
+
+//               秒钟
+                cav.save();
+                cav.lineWidth = "3";
+                cav.strokeStyle = "black";
+                cav.rotate(sDeg);
+                cav.beginPath();
+                cav.moveTo(0, -150);
+                cav.lineTo(0, 15);
+                cav.closePath();
+                cav.stroke();
+                cav.restore();
+//               分钟
+                cav.save();
+                cav.lineWidth =4;
+                cav.strokeStyle = 'blue';
+                cav.rotate(mDeg);
+                cav.beginPath();
+                cav.moveTo(0, -120);
+                cav.lineTo(0, 15);
+                cav.stroke();
+                cav.closePath();
+                cav.restore();
+
+//              时钟
+                cav.save();
+                cav.lineWidth =5;
+                cav.strokeStyle = 'yellow';
+                cav.rotate(hDeg);
+                cav.beginPath();
+                cav.moveTo(0, -100);
+                cav.lineTo(0, 15);
+                cav.stroke();
+                cav.closePath();
+                cav.restore();
+//              中间的圆
+                cav.beginPath();
+                cav.fillStyle='green';
+                cav.arc(0, 2, 10, 0, Math.PI * 2);
+                cav.fill();
+                cav.closePath();
+            }
+            timer=setInterval(draw,1000);
+    </script>
+</body>
+</html>

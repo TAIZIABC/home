@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #main{
+            width: 400px;
+            height: 300px;
+            margin: 0 auto;
+            border: 1px solid #000;
+        }
+        #btn{
+            display: inline-block;
+            width: 200px;
+            height: 45px;
+            border-radius:4px;
+            margin-left: 560px;
+            margin-top: 50px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <button id="btn">添加节点</button>
+    <div id="main"></div>
+    <script>
+        var main=document.getElementById("main");
+        var btn=document.getElementById("btn");
+
+        btn.onclick=function(){
+            var h1_node=document.createElement("h1");
+            h1_node.innerHTML="新节点";
+            main.appendChild(h1_node);
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>jQuery练习</title>
+    <!--<script src="jquery-3.2.1.js"></script>-->
+    <script>
+        window.onload = function(){
+            var oBut = document.getElementById("btn");
+            oBut.onclick = function ()
+            {
+                document.getElementById("div1").innerHTML = "hello world";
+            }
+        }
+    </script>
+</head>
+<body>
+<button id="btn">按钮</button>
+<div id="div1" style="width: 100px;height: 100px;background-color: red"></div>
+</body>
+</html>

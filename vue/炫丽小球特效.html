@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="bootstrap.css">
+    <style>
+        #canvas{
+            margin-left: 100px;
+            background-color: #0C1021;
+        }
+    </style>
+</head>
+<body>
+<canvas id="canvas" width="1000" height="600"></canvas>
+<script>
+    var canvas=document.getElementById("canvas");
+    var ctx=canvas.getContext("2d");
+    class Ball{
+//        构造函数
+        constructor(x,y,color){
+            this.x=x;
+            this.y=y;
+            this.color=color;
+            this.r=40;
+        }
+//        画圆方法
+        render(){
+            ctx.save();
+            ctx.beginPath();
+            ctx.arc(this.x,this.y,this.r,0,Math.PI*2);
+            ctx.fillStyle=this.color;
+            ctx.fill();
+            ctx.restore();
+        }
+    }
+
+    class moveBall extends Ball{
+        constructor(x,y,color){
+            super(x,y,color);
+            this.dX=Math.floor(Math.random()*(5+5+1)-5);
+            this.dY=Math.floor(Math.random()*(5+5+1)-5);
+            this.dR=Math.floor(Math.random()*(5-1+1)+1);
+        }
+//        移动方法
+        upData(){
+            this.x+=this.dX;
+            this.y+=this.dY;
+            this.r-=this.dR;
+            if(this.r<=0){
+                this.r=0;
+            }
+        }
+    }
+    var ballArr=[];
+    var colorArr=['green','yellow','blue','pink','red'];
+    canvas.onmousemove=function(e){
+        var ball=new moveBall(e.offsetX,e.offsetY,colorArr[Math.floor(Math.random()*6)]);
+        ballArr.push(ball);
+    }
+    timer=setInterval(function(){
+        ctx.clearRect(0,0,1000,600);
+        for(var i=0;i<ballArr.length;i++){
+            ballArr[i].render();
+            ballArr[i].upData();
+        }
+    },50)
+</script>
+</body>
+</html>

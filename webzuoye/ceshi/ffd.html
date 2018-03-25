@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>IT之家</title>
+    <style type="text/css">
+        table
+        {
+            border-collapse:collapse;           /*将边框变成单线*/
+            width: 80%;
+            margin: 0 auto;
+
+        }
+        table, td, th
+        {
+            border:1px solid black;
+            text-align: center;
+        }
+        thead{
+            background-color: yellow;
+        }
+        tr:hover{
+            background-color: green;
+        }
+        table tr:active{
+        background-color: red;
+        }
+    </style>
+    <script>
+        window.onload=function(){
+            var aa=document.getElementById("aa");
+            var trs=aa.getElementsByTagName("tr");
+            console.log(trs);
+            for(var i=0;i<trs.length;i++){
+                trs[i].onclick=function(){
+                    for(var i=0;i<trs.length;i++){
+                        trs[i].style.backgroundColor="";
+                    }
+                    this.style.backgroundColor="red";
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+<table >
+    <thead><tr><th>班级</th><th>学号</th><th>性别</th></tr></thead>
+    <tbody id="aa">
+        <tr><td>网络151班</td><td>01</td><td>男</td></tr>
+        <tr><td>网络152班</td><td>02</td><td>女</td></tr>
+        <tr><td>网络153班</td><td>03</td><td>男</td></tr>
+        <tr><td>网络154班</td><td>04</td><td>女</td></tr>
+        <tr><td>网络155班</td><td>05</td><td>男</td></tr>
+        <tr><td>网络156班</td><td>06</td><td>女</td></tr>
+    </tbody>
+</table>
+</body>
+</html>

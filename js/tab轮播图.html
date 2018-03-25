@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #aa{
+            width: 800px;
+            height: 800px;
+            margin: 20px auto;
+            position: relative;
+        }
+        #aa img{
+            width: 800px;
+            height: 800px;
+            position: absolute;
+            left: 0;
+            top: 0;
+            display: none;
+        }
+        #bb{
+            width: 120px;
+            height: 8px;
+            position: absolute;
+            left: 330px;
+            bottom: 60px;
+        }
+        #bb li{
+            list-style: none;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            float: left;
+            background-color: red;
+            margin-right: 4px;
+        }
+    </style>
+    <script>
+        window.onload=function(){
+            var aa=document.getElementById("aa");
+            var img=aa.getElementsByTagName("img");
+            var bb=document.getElementById("bb");
+            var lis=bb.getElementsByTagName("li");
+            var j=0;
+            function run(){
+                j++;
+                for(var i=0;i<img.length;i++){
+                    img[i].index=i;
+                    img[i].style.display="none";
+                }
+                if(j>4){
+                    j=0;
+                }
+                img[j].style.display="block";
+            }
+            var timer=setInterval(run,2000);
+            for(var i=0;i<lis.length;i++){
+                lis[i].index=i;
+                lis[i].onmouseover=function(){
+                    clearInterval(timer);
+                    for(var i=0;i<img.length;i++){
+                        img[i].style.display="none";
+                    }
+                    this.style.backgroundColor="white";
+                    img[this.index].style.display="block";
+                }
+                lis[i].onmouseout=function(){
+                    j=this.index;
+                    timer=setInterval(run,2000);
+                    this.style.backgroundColor="red";
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <div id="aa">
+        <img src="../images/tab1.jpg"  style="display: block"/>
+        <img src="../images/tab2.jpg" />
+        <img src="../images/tab3.jpg" />
+        <img src="../images/tab4.jpg" />
+        <img src="../images/tab5.jpg" />
+        <ul id="bb">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+</body>
+</html>

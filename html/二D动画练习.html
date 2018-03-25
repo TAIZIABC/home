@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>二D动画练习</title>
+    <style>
+        /*div{*/
+        /*width:100px;*/
+        /*height:100px;*/
+        /*background:red;*/
+        /*position:relative;*/
+        /*animation-name:myfirst;*/
+        /*animation-duration:5s;*/
+        /*animation-timing-function:linear;*/
+        /*animation-delay:2s;*/
+        /*animation-iteration-count:infinite;*/
+        /*animation-direction:alternate;*/
+        /*animation-play-state:running;*/
+        /*}*/
+        /*
+       简写模式：animation: name     duration    timing-function     delay       iteration-count  direction:                     direction;
+                 animation: 姓名      持续时间    运动速度           延迟时间     运动次数        是否应该轮流反向播放动画        是否需要轮流反向播放
+       */
+        div{
+            width:100px;
+            height:100px;
+            background:red;
+            position:relative;
+            animation: myfirst 5s linear 2s infinite alternate running;
+        }
+        @keyframes myfirst
+        {
+            0%   {background:red; left:0px; top:0px;}
+            25%  {background:yellow; left:200px; top:0px;}
+            50%  {background:blue; left:200px; top:200px;}
+            75%  {background:green; left:0px; top:200px;}
+            100% {background:red; left:0px; top:0px;}
+        }
+
+
+
+
+        
+    </style>
+</head>
+<body>
+    <div></div>
+
+</body>
+</html>

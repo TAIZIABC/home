@@ -1,0 +1,73 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.aa{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    background-color: #ccc;
+    animation: sport 5s linear 0s infinite ;
+
+}
+@keyframes sport {
+    0%{
+        background-color:forestgreen;
+        left: 0px;
+        top: 0px;
+    }
+    25%{
+        background-color:red;
+        left: 300px;
+        top: 0px;
+    }
+    50%{
+        background-color: yellow;
+        left: 300px;
+        top: 300px;
+    }
+    75%{
+        background-color: blue;
+        left: 0px;
+        top:300px;
+    }
+    100% {
+        background-color: green;
+        left: 0px;
+        top: 0px;
+    }
+.bb{
+    width: 100px;
+    height: 100px;
+    margin-left: 900px;
+    position: absolute;
+    background-color: #ccc;
+    animation: sport2 5s linear 0s infinite ;
+}
+@keyframes sport2 {
+    0%{
+        background-color:forestgreen;
+        left: 0px;
+        top: 0px;
+    }
+    25%{
+        background-color:red;
+        left: 300px;
+        top: 0px;
+    }
+    50%{
+        background-color: yellow;
+        left: 300px;
+        top: 300px;
+    }
+    75%{
+        background-color: blue;
+        left: 0px;
+        top:300px;
+    }
+    100%{
+        background-color: green;
+        left: 0px;
+        top: 0px;
+    }
+}

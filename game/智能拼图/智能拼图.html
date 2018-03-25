@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #cav{
+            border: 1px solid #000;
+            width: 610px;
+            height: 610px;
+            margin: 5px  50px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        #cav img{
+            height: 200px;
+        }
+        input{
+            width: 120px;
+            height: 40px;
+            margin-left:250px;
+        }
+        #fa{
+            position: absolute;
+            right: 50px;
+            top: 0;
+            width: 600px;
+            height: 600px;
+            background: url("images/fa.jpg");
+            background-size: cover;
+        }
+    </style>
+    <script>
+        window.onload=function(){
+//            获取图片元素
+            var img=document.getElementsByTagName("img");
+            var reset=document.getElementById("reset");
+            var arr=['images/timg_01.gif','images/timg_02.gif','images/aa.png','images/timg_04.gif','images/timg_05.gif','images/timg_06.gif','images/timg_07.gif','images/timg_08.gif','images/timg_09.gif'];
+
+            reset.onclick=run;
+
+//            打乱数组
+            run();
+            function run() {
+                arr2=arr.sort(function(){ return 0.5 - Math.random() });
+                var stat=1;
+                for(var i=0;i<img.length;i++) {
+                    img[i].src = arr2[i];
+                    img[i].onclick = function () {
+                        if (this.getAttribute('src') != 'images/aa.png') {
+                            var x = arr2.indexOf(this.getAttribute('src'), 0);
+                            var y = arr2.indexOf('images/aa.png', 0);
+
+                            if ((x-y==1||x-y==-1||x-y ==3||x-y==-3)&&(x*y!=6&&x*y!=30)){
+                                var t = arr2[x];
+                                arr2[x] = arr[y];
+                                arr2[y] = t;
+                                for (var i = 0; i < arr2.length; i++) {
+                                    img[i].src = arr2[i];
+                                }
+                                for(var i=0;i<arr2.length;i++){
+//                            stat=1;
+                                    if(arr2[i]!=arr[i]) {
+                                        stat=0;
+                                        break;
+                                    }
+                                }
+                                if(stat==0){
+                                    return alert("恭喜");
+                                }
+                            }
+
+                        }
+                    }
+                }
+            }
+            }
+
+    </script>
+</head>
+<body>
+<input type="button" id="reset" value="重新开始">
+<div style="position: relative">
+    <div id="cav">
+        <img src="images/timg_01.gif" >
+        <img src="images/timg_02.gif" >
+        <img src="images/aa.png" >
+        <img src="images/timg_04.gif" >
+        <img src="images/timg_05.gif" >
+        <img src="images/timg_06.gif" >
+        <img src="images/timg_07.gif" >
+        <img src="images/timg_08.gif" >
+        <img src="images/timg_09.gif" >
+    </div>
+    <div id="fa"></div>
+</div>
+</body>
+</html>

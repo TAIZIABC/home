@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #main{
+            width: 400px;
+            height: 400px;
+            border: 1px solid #000;
+            margin: 40px auto;
+        }
+        button {
+            width: 150px;
+            height: 40px;
+            margin-left: 40px;
+            margin-top: 30px;
+        }
+        #btn1{
+            margin-left: 500px;
+        }
+    </style>
+</head>
+<body>
+<button id="btn1">添加超链接</button>
+<button id="btn2">删除超链接</button>
+
+<div id="main">
+    <li><a href="http://www.baidu.com">百度</a></li>
+    <li><a href="#">腾讯</a></li>
+    <li><a href="#">新浪</a></li>
+    <li><a href="#">阿里</a></li>
+</div>
+
+<script>
+    var arr=['百度','新浪','腾讯','小米','谷歌','华为','百度'];
+    var main=document.getElementById("main");
+    var btn_add=document.getElementById("btn1");
+    var btn_del=document.getElementById("btn2");
+
+    btn_add.onclick=function(){
+        if(arr.length<=0){
+            arr=['百度','新浪','腾讯','小米','谷歌','华为','百度'];
+        }
+        var newLi=document.createElement("li");
+        var addA=document.createElement("a");
+        addA.innerHTML=arr.pop();
+        addA.setAttribute('href','http://www.baidu.com');
+        newLi.appendChild(addA);
+        main.appendChild(newLi);
+    }
+    btn_del.onclick=function(){
+        var Lis=main.getElementsByTagName("li");
+        main.removeChild(Lis[0]);
+    }
+</script>
+</body>
+</html>

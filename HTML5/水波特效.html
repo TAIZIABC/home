@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="canvas" width="1366" height="800"></canvas>
+    <script>
+        var canvas=document.getElementById("canvas");
+        var cv=canvas.getContext("2d");
+        cv.fillStyle="#0C1021";
+        cv.fillRect(0,0,1366,800);
+        cv.fill();
+        canvas.onclick=function(e){
+            var X= e.clientX;
+            var Y= e.clientY;
+            var radius=5;
+            var timer=setInterval(function(){
+                cv.arc(X,Y,radius,0,Math.PI*2);
+                cv.strokeStyle="yellow";
+                cv.stroke();
+                radius+=10;
+                if(radius>=50){
+                    clearInterval(timer);
+                }
+            },200)
+        }
+    </script>
+</body>
+</html>

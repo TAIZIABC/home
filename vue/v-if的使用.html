@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+         <div id="aa">
+             <input type="text" v-model="message">
+             <p>输入的成绩等级是：</p>
+             <p v-if="message>85">优秀</p>
+             <p v-else-if="message>75">良好</p>
+             <p v-else-if="message>60">及格</p>
+             <p v-else>差</p>
+         </div>
+         <script src="vue.js"></script>
+         <script>
+             new Vue({
+                 el:"#aa",
+                 data:{
+                     message:80
+                 }
+             })
+         </script>
+</body>
+</html>

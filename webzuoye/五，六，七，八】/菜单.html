@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+        *{padding: 0;margin:0;}
+        ul.B{
+            width: 100%;
+            height: 40px;
+        }
+        li{width:10%;height:49px;background: black;text-align: center;float: left;}
+        a.height{line-height: 49px;}
+        a{text-decoration:none;color:#fff;margin-bottom: 0;font-size: larger;}
+        div.li{
+            width: 153px;
+            height: 40px;
+            display: inline-block}
+    </style>
+    <script>
+        window.onload=function() {
+            var doc = document.getElementsByTagName("li");
+            var ele=new Array();
+            for(var i=0;i<doc.length;i++){
+                var a = doc[i].getElementsByTagName("div")[0];
+                ele.push(a);
+            }
+            for(var i=0;i<doc.length;i++){
+                doc[i].index=i;
+                doc[i].onmouseover=function(){
+//
+//                    for(var i=0;i<ele.length;i++){
+//                        ele[i].style.display='none';
+//                    }
+                    ele[this.index].style.display='block';
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+
+<div  >
+    <ul class="B">
+        <li>
+            <a href="#" class="height">首页</a>
+            <div></div>
+        </li>
+        <li >
+            <a href="#" class="height">学校概况</a>
+            <div class="li">
+                <a href="#">学校简介</a>
+                <a href="#">历史沿革</a>
+                <a href="#">现任领导</a>
+                <a href="#">历任书记校长</a>
+                <a href="#">领导关怀</a>
+                <a href="#">杰出校友</a>
+                <a href="#">校园结构图</a>
+                <a href="#">校园导游</a>
+            </div>
+        </li>
+        <li >
+            <a href="#" class="height" style="background-color: red;">教学工作</a>
+            <div class="li">
+                <a href="#">本科生教育</a>
+                <a href="#">研究生教育</a>
+                <a href="#">继续教育</a>
+                <a href="#">高职教育</a>
+                <a href="#">实验教学</a>
+                <a href="#">精品课件</a>
+                <a href="#">优质课程</a>
+                <a href="#">教育质量工程</a>
+                <a href="#">课程中心</a>
+            </div>
+        </li>
+        <li><a href="#" class="height">学科建设</a><div></div></li>
+        <li><a href="#" class="height">科学研究</a><div></div></li>
+        <li>
+            <a href="#" class="height">招生就业</a>
+            <div class="li">
+                <a href="#">本科生招生</a>
+                <a href="#">研究生招生</a>
+                <a href="#">高职生招生</a>
+                <a href="#">成人招生</a>
+                <a href="#">本科生就业</a>
+                <a href="#">研究生就业</a>
+                <a href="#">高职生就业</a>
+            </div>
+        </li>
+        <li>
+            <a href="#" class="height">人才引进</a>
+            <div class="li">
+                <a href="#">校本部</a>
+                <a href="#">南昌校区</a>
+            </div>
+        </li>
+        <li>
+            <a href="#" class="height">学工动态</a>
+            <div class="li">
+                <a href="#">学工部</a>
+                <a href="#">校团委</a>
+            </div>
+        </li>
+        <li><a href="#" class="height">创新创业</a><div></div></li>
+        <li><a href="#" class="height">心理咨询</a><div></div></li>
+    </ul>
+</div>
+
+</body>
+</html>

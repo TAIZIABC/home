@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="../source/jquery-3.2.1.js"></script>
+    <script src="../source/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="../source/jquery-ui.min.css"/>
+    <script>
+        $(document).ready(function(){
+            var i=0;
+            var cc = 0;
+            var res;
+            $("button.ccc").click(function(){
+                if(cc==1){
+                    $("#result").text("");
+                    $("#result2").text("");
+                    cc = 0;
+                }
+                var aa = $(this).text();
+                $("#result").append(aa);
+                $("#result2").append(aa);
+            });
+            //重置按钮
+            $("#cle").click(function(){
+                $("#result").text("");
+                $("#result2").text("");
+                cc = 0;
+            });
+            //加减乘除按钮
+            $("#add").click(function(){
+                var aa = $(this).text();
+                $("#result2").append(aa);
+                $("#result").text("");
+                i=1;
+                cc = 0;
+            });
+            $("#cut").click(function(){
+                var aa = $(this).text();
+                $("#result2").append(aa);
+                $("#result").text("");
+                i = 2;
+                cc = 0;
+            });
+            $("#cen").click(function(){
+                var aa = $(this).text();
+                $("#result2").append(aa);
+                $("#result").text("");
+                i = 3;
+                cc = 0;
+            });
+            $("#chu").click(function(){
+                var aa = $(this).text();
+                $("#result2").append(aa);
+                $("#result").text("");
+                i = 4;
+                cc = 0;
+            });
+            //删除按钮
+            $("#del").click(function(){
+                var arr = $("#result").text();
+                var arr2 = $("#result2").text();
+                $("#result").text("");
+                $("#result2").text("");
+                for(var a=0;a<arr.length-1;a++){
+                    $("#result").append(arr[a]);
+                }
+                for(var b=0;b<arr2.length-1;b++){
+                    $("#result2").append(arr2[b]);
+                }
+            });
+            //结束按钮
+            $("#end").click(function(){
+                switch (i){
+                    case 1: res = parseFloat($("#result2").text()) + parseFloat($("#result").text());
+                        break;
+                    case 2: res = parseFloat($("#result2").text()) - parseFloat($("#result").text());
+                        break;
+                    case 3: res = parseFloat($("#result2").text()) * parseFloat($("#result").text());
+                        break;
+                    case 4: res = parseFloat($("#result2").text()) / parseFloat($("#result").text());
+                        break;
+                }
+                $("#result").text(res);
+                $("#result2").text(res);
+                cc =1;
+            });
+        })
+    </script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul li{
+            list-style: none;
+        }
+        #out{
+            width: 300px;
+            height: 400px;
+            border: 1px solid #000;
+            margin-left: 40%;
+            margin-top: 100px;
+            position: relative;
+            background-color: red;
+        }
+        #result,#result2{
+            width: 300px;
+            height: 38px;
+            border-bottom: 1px solid #000;
+            border-top: 1px solid #000;
+        }
+        ul{
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            background-color:red;
+        }
+        ul li{
+            float: left;
+            width: 100px;
+            height: 45px;
+        }
+        button{
+            width: 100px;
+            height: 45px;
+            float: left;
+        }
+    </style>
+</head>
+<body>
+<div id="out">
+    <h1 style="text-align: center;color: chartreuse">计算器</h1>
+    <div id="result"></div>
+    <div id="result2"></div>
+    <button style="width: 100px;height: 56px;font-size: 25px" id="cle">clear</button>
+    <button style="width: 100px;height: 56px;font-size: 25px" id="del">del</button>
+    <button style="width: 100px;height: 56px;font-size: 25px" id="end">=</button>
+    <ul>
+        <li><button id="add">+</button></li>
+        <li><button id="cut">-</button></li>
+        <li><button id="cen">*</button></li>
+        <li><button id="chu">/</button></li>
+        <li><button class="ccc">1</button></li>
+        <li><button class="ccc">2</button></li>
+        <li><button class="ccc">3</button></li>
+        <li><button class="ccc">4</button></li>
+        <li><button class="ccc">5</button></li>
+        <li><button class="ccc">6</button></li>
+        <li><button class="ccc">7</button></li>
+        <li><button class="ccc">8</button></li>
+        <li><button class="ccc">9</button></li>
+        <li><button class="ccc">0</button></li>
+        <li><button class="ccc">.</button></li>
+    </ul>
+</div>
+</body>
+</html>

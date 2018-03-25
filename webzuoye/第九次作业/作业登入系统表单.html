@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        div.aa{
+            width: 500px;
+            height: 400px;
+            border: 1px solid blue;
+            margin: 100px auto;
+        }
+        tr{
+            height: 50px;
+        }
+        table{
+            margin: 0 auto;
+        }
+        #key{
+            display: inline-block;
+            width: 100px;
+            height: 25px;
+            vertical-align: middle;
+            color: blue;
+            font-family:Arial;
+            font-style:italic;
+            font-size: 25px;
+        }
+        input[type=text]{
+            height: 25px;
+            margin-left: 20px;
+        }
+        .title{
+            margin-top: 20px;
+            height: 50px;
+            text-align: center;
+        }
+        input[type=button]{
+            width: 65px;
+            height: 40px;
+            border-radius:6px;
+            background: -webkit-linear-gradient(top,forestgreen,lawngreen,forestgreen);
+            color: white;
+        }
+    </style>
+    <script>
+        window.onload=function(){
+            var key=document.getElementById("key");
+            var user=document.getElementById("user");
+            var pass=document.getElementById("pass");
+            var email=document.getElementById("email");
+            var keyCode=document.getElementById("keyCode");
+            var login=document.getElementById("login");
+            var code="";
+
+//            生成验证码
+            function createCode(){
+                code="";
+                var code_arr=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9,
+                    'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
+
+                for(var i=0;i<6;i++){
+                    code+=code_arr[parseInt(Math.random()*52)];
+                }
+                key.innerHTML=code;
+            }
+            createCode();
+            key.onclick=function(){
+                createCode();
+            }
+            login.onclick=function () {
+                if(user.value<=0){
+                    alert("请输入用户名！");
+                }else if(pass.value<=0){
+                    alert("请输入密码！");
+                }else if(email.value<=0){
+                    alert("请输入邮箱！");
+                }else if(email.value.indexOf("@")==-1){
+                    alert("邮箱格式不正确！");
+                }else if(keyCode.value<=0){
+                    alert("请输入验证码");
+                }else if(keyCode.value.toUpperCase()!=code.toUpperCase()){
+                    alert("验证码错误，请重新输入！");
+                    createCode();
+                }else
+                    alert("登入成功！");
+            }
+        }
+    </script>
+</head>
+<body>
+<div class="aa">
+    <form action="">
+        <table>
+            <p class="title">请用学号或者教工号登入系统</p>
+            <tr>
+                <td>用户名:</td>
+                <td><input type="text" id="user"></td>
+            </tr>
+            <tr>
+                <td>密码:</td>
+                <td><input type="text" id="pass"></td>
+            </tr>
+            <tr>
+                <td>邮箱:</td>
+                <td><input type="text" id="email"></td>
+            </tr>
+            <tr>
+                <td>验证码:</td>
+                <td><input type="text" style="width: 90px" id="keyCode"><div id="key"></div></td>
+            </tr>
+            <tr>
+                <td><input type="button" id="login" value="登入"></td>
+                <td><input type="checkbox"  style="margin-left: 20px">下次自动登入</td>
+            </tr>
+        </table>
+    </form>
+</div>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #aa{
+            border: 1px solid #000;
+            margin-left:400px;
+        }
+    </style>
+</head>
+<body>
+    <canvas width="500" height="500" id="aa"></canvas>
+    <script>
+        var cas=document.getElementById("aa").getContext("2d");
+        cas.beginPath();
+        cas.lineWidth="5";
+        cas.strokeStyle="blue";
+        cas.moveTo(150,50);
+        cas.lineTo(350,50);
+        cas.lineTo(400,250);
+        cas.lineTo(100,250);
+        cas.closePath();
+        cas.stroke();
+        cas.beginPath();
+        cas.strokeStyle="red";
+        cas.moveTo(300,150);
+//        绘制圆形公式arc(x,y,起始弧度，结束弧度，顺逆时钟）true为顺时钟，false为逆时针
+        cas.arc(250,150,50,0,Math.PI*2,true);
+        cas.stroke();
+        cas.fillStyle="yellow";
+        cas.fill();
+        cas.moveTo(400,250);
+        cas.lineWidth="5";
+        cas.strokeStyle="blue";
+        cas.arc(250,250,150,0,Math.PI,false);
+        cas.stroke();
+
+    </script>
+</body>
+</html>

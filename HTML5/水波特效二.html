@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="canvas" width="1366" height="800"></canvas>
+    <script>
+        var canvas=document.getElementById("canvas");
+        var cv=canvas.getContext("2d");
+        cv.fillStyle="#0C1021";
+        cv.fillRect(0,0,1366,800);
+        cv.fill();
+//        颜色选择库数组
+        var arr=['green','blue','pink','red','#B5E61D','#FFAEC9','#3F48CC','##D7E912','yellow','#210C1C'];
+//        鼠标点击事件
+        canvas.onclick=function(e){
+//            取随机颜色
+            var num=Math.floor(Math.random()*11);
+            var num2=Math.floor(Math.random()*11);
+            var color_1=arr[num];
+            var color_2=arr[num2];
+            var radius=10;
+            var status=1;
+//            获取点击点的位置
+            var X= e.clientX;
+            var Y= e.clientY;
+            var timer=setInterval(function(){
+                cv.beginPath();
+                cv.lineWidth=5;
+                if(status==1){
+                    cv.strokeStyle=color_1;
+                    radius+=10;
+                }
+
+                if(radius>200||radius<10){
+                    status=-status;
+                }
+                if(status==-1){
+                    cv.strokeStyle=color_2;
+                    radius=radius-10;
+                }
+                cv.arc(X,Y,radius,0,Math.PI*2);
+                cv.stroke();
+                cv.closePath();
+            },200)
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #canvas{
+            background-color: #0e1223;
+        }
+    </style>
+</head>
+<body>
+<canvas id="canvas" width="1366" height="500"></canvas>
+<script>
+    var canvas=document.getElementById("canvas");
+    var cv=canvas.getContext("2d");
+    var st_left;
+    var st_top;
+    cv.strokeStyle="yellow";
+    cv.lineWidth=5;
+
+    canvas.onmousedown=function(e){
+        st_left= e.clientX;
+        st_top= e.clientY;
+        cv.beginPath();
+        cv.moveTo(st_left,st_top);
+        canvas.onmousemove=function(e){
+            var new_left= e.clientX;
+            var new_top= e.clientY;
+            cv.arc(st_left-new_left,st_top,new_left,0,Math.PI*2,true);
+            cv.stroke();
+        }
+    }
+    canvas.onmouseup=function(){                //鼠标抬起时将移动事件移出
+        canvas.onmousemove=null;
+    }
+
+</script>
+</body>
+</html>

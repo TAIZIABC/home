@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="../source/jquery-3.2.1.js"></script>
+    <script>
+        $(function(){
+            $("button.ccc").click(function(){
+                var aa=$(this).text();
+                $("#result").append(aa);
+            });
+
+            //删除函数
+            function rem(id){
+                var arr = $(id).text();
+                $(id).text("");
+                for(var a=0;a<arr.length-1;a++){
+                    $(id).append(arr[a]);
+                }
+            }
+            //删除按钮
+            $("#del").click(function(){
+                rem(result);
+                rem(result2);
+            });
+            //重置按钮
+            $("#cle").click(function(){
+                $("#result").text("");
+                $("#result2").text("");
+            });
+
+            $("#end").click(function(){
+                var str=$("#result").text();
+                var res=eval(str);
+                $("#result").text(res);
+                $("#result2").text(res);
+            })
+
+        });
+
+    </script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul li{
+            list-style: none;
+        }
+        #out{
+            width: 300px;
+            height: 358px;
+            border: 1px solid #000;
+            margin-left: 40%;
+            margin-top: 100px;
+            position: relative;
+            background-color: red;
+        }
+        #result,#result2{
+            width: 300px;
+            height: 38px;
+            border-bottom: 1px solid #000;
+            border-top: 1px solid #000;
+        }
+        ul{
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            background-color:red;
+        }
+        ul li{
+            float: left;
+            width: 75px;
+            height: 45px;
+        }
+        button{
+            width: 75px;
+            height: 45px;
+            float: left;
+        }
+        .fff{
+            width: 150px;
+        }
+    </style>
+</head>
+<body>
+<div id="out">
+    <h1 style="text-align: center;color: chartreuse">计算器</h1>
+    <div id="result"></div>
+    <div id="result2"></div>
+    <button style="width: 100px;height: 56px;font-size: 25px" id="cle">clear</button>
+    <button style="width: 100px;height: 56px;font-size: 25px" id="del">del</button>
+    <button style="width: 100px;height: 56px;font-size: 25px" id="end">=</button>
+    <ul>
+        <li><button class="ccc">1</button></li>
+        <li><button class="ccc">2</button></li>
+        <li><button class="ccc">3</button></li>
+        <li><button class="ccc">+</button></li>
+        <li><button class="ccc">4</button></li>
+        <li><button class="ccc">5</button></li>
+        <li><button class="ccc">6</button></li>
+        <li><button class="ccc">-</button></li>
+        <li><button class="ccc">7</button></li>
+        <li><button class="ccc">8</button></li>
+        <li><button class="ccc">9</button></li>
+        <li><button class="ccc">*</button></li>
+        <li class="fff"><button class="ccc fff">0</button></li>
+        <li><button class="ccc">.</button></li>
+        <li><button class="ccc">/</button></li>
+    </ul>
+</div>
+</body>
+</html>

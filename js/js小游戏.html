@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        body{
+            background:url("https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1508776633860&di=c87f562ea8b2c2789ffcf0d5a56300da&imgtype=0&src=http%3A%2F%2Fuploadfile.huiyi8.com%2F2014%2F0416%2F20140416072252837.jpg");
+            background-size:cover;
+        }
+        div{
+            position: relative;
+            margin-top:200px;
+        }
+
+        button{
+            width: 100px;
+            height: 40px;
+            border-radius: 15px;
+            background-color: darkorange;
+            position: absolute;
+        }
+        #bt1{
+            left: 400px;
+        }
+        #bt2{
+            left: 800px;
+        }
+    </style>
+    <script>
+        window.onload=function(){
+
+            var oB2=document.getElementById("bt2");
+            var oB1=document.getElementById("bt1");
+            oB2.onmouseover=function(){
+                var left=parseInt(1000*Math.random());
+                var top=parseInt(100*Math.random());
+                oB2.style.left=left+"px";
+                oB2.style.top=top+"px";
+            }
+            oB1.onclick=function(){
+                alert("YES I DO!");
+            }
+
+        }
+    </script>
+</head>
+<body>
+    <h1 style="text-align: center">你愿意嫁给我吗？</h1>
+    <div>
+        <button id="bt1">愿意</button>
+        <button id="bt2">不愿意</button>
+    </div>
+
+</body>
+</html>

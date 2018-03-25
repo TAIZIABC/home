@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    function sJ(x,y){
+        var b=Math.round(Math.random()*(y-x)+x);
+        var b=Math.round(Math.random()*(y-x)+x);
+//        document.write(a);
+//        document.write("<br/>");
+//        document.write(b);
+        return b;
+    }
+
+    var i=0;
+    var timer=setInterval(function(){
+        i++;
+        var re=sJ(4,16);
+        if(re==4||re==16){
+            clearInterval(timer);
+            alert(i);
+        }
+    },100)
+
+</script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+        window.onload=function(){
+            var btn=document.getElementsByTagName("button")[0];
+            var div=document.getElementsByTagName("div")[0];
+            var stat=2;
+            btn.onclick=function(){
+                if(stat==1){
+                    div.style.display="block";
+                    stat=2;
+                }else if(stat==2){
+                    div.style.display="none";
+                    stat=1;
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+        <button>GO</button>
+        <div style="width: 100px;height: 100px;display:block;background-color: red"></div>
+</body>
+</html>

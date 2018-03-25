@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #fa{
+            width: 70%;
+            margin: 100px auto;
+        }
+        #aa{
+            width: 400px;
+            height: 400px;
+            border: 1px solid #000;
+            background: url("../images/fdj.jpg") no-repeat;
+            background-size: cover;
+            position: relative;
+            float: left;
+        }
+        #hid{
+            width: 400px;
+            height: 400px;
+            position: absolute;
+            left: 0;
+            top: 0;
+            opacity: 0;
+        }
+        #bb{
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            opacity: 0.6;
+            position: absolute;
+            display: none;
+            left: 0;
+            top: 0;
+        }
+        #cc{
+            width: 400px;
+            height: 400px;
+            float: left;
+            margin-left: 20px;
+            overflow: hidden;
+            position: relative;
+            display: none;
+        }
+        #dd{
+            width: 800px;
+            height: 800px;
+            position: absolute;
+            left: 0;
+            top: 0;
+            background: url("../images/fdj.jpg");
+            display: none;
+        }
+    </style>
+    <script>
+        window.onload=function(){
+            var aa=document.getElementById("aa");
+            var bb=document.getElementById("bb");
+            var cc=document.getElementById("cc");
+            var dd=document.getElementById("dd");
+            aa.onmousemove=function(e){
+                var ev=window.ev||e;
+                var mouseLeft=ev.offsetX;
+                var mouseTop=ev.offsetY;
+                var bbLeft=mouseLeft-100;
+                var bbTop=mouseTop-100;
+                if(bbLeft<0){
+                    bbLeft=0;
+                }
+                if(bbLeft>200){
+                    bbLeft=200;
+                }
+                if(bbTop<0){
+                    bbTop=0;
+                }
+                if(bbTop>200){
+                    bbTop=200;
+                }
+                bb.style.left=bbLeft+"px";
+                bb.style.top=bbTop+"px";
+                dd.style.left=bbLeft*(-2)+"px";
+                dd.style.top=bbTop*(-2)+"px";
+            }
+            aa.onmouseout=function(){
+                bb.style.display="none";
+                cc.style.display="none";
+                dd.style.display="none";
+            }
+            aa.onmouseover=function(){
+                bb.style.display="block";
+                cc.style.display="block";
+                dd.style.display="block";
+            }
+        }
+    </script>
+</head>
+<body>
+<div id="fa">
+    <div id="aa">
+        <div id="bb"></div>
+        <div id="hid"></div>  <!--防止移动出现波动的情况-->
+    </div>
+    <div id="cc">
+        <div id="dd"></div>
+    </div>
+</div>
+</body>
+</html>

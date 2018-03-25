@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <title>ECharts</title>
+</head>
+<body >
+<!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+<div id="main" style="height:500px"></div>
+<!-- ECharts单文件引入 -->
+<script src="http://echarts.baidu.com/build/dist/echarts.js"></script>
+<script type="text/javascript">
+    // 路径配置
+    require.config({
+        paths: {
+            echarts: 'http://echarts.baidu.com/build/dist'
+        }
+    });
+    require(
+            [
+                'echarts',
+                'echarts/chart/pie'  //使用柱状图就加载bar模块，按需加载
+            ],
+            function (ec) {
+                // 基于准备好的dom，初始化echarts图表
+                var myChart = ec.init(document.getElementById('main'));
+
+                    var option={
+                        title:{
+                            text: "第一季度电费消费表",
+                            x:'left'
+                        },
+                        tooltip:{
+                            show:true
+                        },
+                        legend:{
+                            show:true,
+                            data:['电费'],
+                            x:  'center'
+                        },
+                        series:[
+                            {
+                                name:'电费',
+                                'type':'pie',
+                                'center':['50%','50%'],
+                                 data:[
+                                     {value:110,name:'八月电费'},
+                                     {value:130,name:'九月电费'},
+                                     {value:150,name:'十月电费'},
+                                     {value:180,name:'七月电费'}
+                                 ]
+                            }
+                        ]
+                    };
+                myChart.setOption(option);
+            }
+    );
+</script>
+</body>

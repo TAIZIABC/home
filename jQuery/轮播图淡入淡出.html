@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #aa{
+            width: 800px;
+            height: 800px;
+            margin: 20px auto;
+            position: relative;
+        }
+        #aa img{
+            width: 800px;
+            height: 800px;
+            position: absolute;
+            left: 0;
+            top: 0;
+            display: none;
+        }
+        #bb{
+            width: 120px;
+            height: 8px;
+            position: absolute;
+            left: 330px;
+            bottom: 60px;
+        }
+        #bb li{
+            list-style: none;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            float: left;
+            background-color: red;
+            margin-right: 4px;
+        }
+    </style>
+    <script src="../source/jquery-3.2.1.js"></script>
+    <script>
+        $(function(){
+            var c=0;
+            var time;
+            function run(){
+                c++;
+                (c==5)?c=0:c;
+                $("div img").eq(c).stop().fadeIn(1000).siblings("img").stop().fadeOut(1000);
+                $("ul li").eq(c).css({'background':'white'}).siblings("li").css({'background':'red'});
+            }
+            var timer=setInterval(run,2000);
+            $("ul li").mouseenter(function() {
+                var jqThis=$(this);
+                clearInterval(timer);
+                 time = setTimeout(function (){
+                    c = jqThis.index();
+                    $("div img").eq(c).stop().fadeIn(1000).siblings("img").stop().fadeOut(1000);
+                    $("ul li").eq(c).css({'background': 'white'}).siblings("li").css({'background': 'red'});
+                }, 200);
+            }).mouseleave(function(){
+                clearTimeout(time);
+                timer=setInterval(run,1500);
+            })
+
+
+        })
+    </script>
+</head>
+<body>
+<div id="aa">
+    <img src="../images/tab1.jpg"  style="display: block"/>
+    <img src="../images/tab2.jpg" />
+    <img src="../images/tab3.jpg" />
+    <img src="../images/tab4.jpg" />
+    <img src="../images/tab5.jpg" />
+    <ul id="bb">
+        <li style="background: white"></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</div>
+</body>
+</html>

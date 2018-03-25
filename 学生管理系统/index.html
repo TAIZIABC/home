@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="source/bootstrap.css">
+    <style>
+        .table{
+            margin-top: 30px;
+            width: 800px;
+        }
+        div.header{
+            width: 80%;
+            height: 100px;
+            background-color: #eeeeee;
+            margin: 0 auto;
+            text-align: center;
+        }
+        div.header h1 span{
+            display: inline-block;
+            width: 40px;
+        }
+        div.con{
+            width: 80%;
+            margin: 0 auto;
+            background-color: #eeeeee;
+            position: relative;
+        }
+        div.header li{
+            list-style: none;
+            width: 150px;
+            float: left;
+            font-size: 20px;
+        }
+        div.header li:nth-child(1){
+            margin-left: 200px;
+        }
+        img{
+            /*border: 1px solid #000;*/
+            width: 24%;
+            position: absolute;
+            right: 10px;
+            top: 0px;
+
+        }
+
+    </style>
+    <script src="source/jquery-3.2.1.js"></script>
+</head>
+<body>
+<div class="header">
+    <h1>学<span></span>生<span></span>管<span></span>理<span></span>系<span></span>统</h1>
+    <ul>
+        <li><a href="">学生查询</a></li>
+        <li><a href="">学生管理</a></li>
+        <li><a href="">成绩管理</a></li>
+        <li><a href="">课程管理</a></li>
+    </ul>
+</div>
+<div class="con">
+    <table class="table table-bordered table-striped">
+        <thead>
+        <tr>
+            <th>功能选择</th>
+            <th>
+            <td> 学生信息</td>
+            </th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <!--<td><input type="button" class="btn btn-default" id="search" value="查询"></td>-->
+            <td>
+                <div class="input-group" >
+                    <input type="text" class="form-control" name="search" placeholder="请输入姓名：">
+                    <span class="input-group-btn">
+                         <button class="btn btn-default" id="search">查询</button>
+                    </span>
+                </div>
+            </td>
+            <td>学号</td>
+            <td><input type="text" name="number"></td>
+        </tr>
+        <tr>
+            <td><input type="button" class="btn btn-default" id="insert" value="增加"></td>
+            <td>姓名</td>
+            <td><input type="text" name="name" id="name"></td>
+        </tr>
+        <tr>
+            <td><input type="button" class="btn btn-default" id="update" value="修改"></td>
+            <td>性别</td>
+            <td>
+                <input type="radio" id="sex1" name="sex" value="1" checked>男
+                <input type="radio" id="sex0" name="sex" value="0">女
+            </td>
+        </tr>
+        <tr>
+            <td><input type="button" class="btn btn-default btn-danger" id="del" value="删除"></td>
+            <td>专业</td>
+            <td>
+                <input type="text" name="major">
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>出生时间</td>
+            <td><input type="date" id="date" name="date"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>总评分</td>
+            <td><input type="text" name="score"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>备注</td>
+            <td><input type="text" name="info"></td>
+        </tr>
+        <tr>
+            <td><input type="text" name="id" style="display: none"></td>
+            <td>照片</td>
+            <td>
+                <input type="file" name="picture" id="picture">
+                <input type="text"  id="pic_src" style="display: none">
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    <img src="img/huge.jpg" id="pic">
+</div>
+<script>
+
+    //    查询
+    $("#search").click(function(){
+        xhr = $.ajax({
+            type:"POST",
+            data:{
+                stat:1,
+                name: $("input[name='search']").val()
+            },
+            url:"index.php",
+            async: false,
+            success:function(data){
+                var obj=data;
+                if(obj==''){
+                    alert("没有此人或输入信息有误！")
+                }
+                $("input[name='number']").val(obj.number);
+                $("input[name='name']").val(obj.name);
+                $("input[name='major']").val(obj.major);
+                $("input[name='date']").val(obj.date);
+                $("input[name='score']").val(obj.score);
+                $("input[name='info']").val(obj.info);
+                $("input[name='id']").val(obj.id);
+                if(obj.sex==0){
+                    $("#sex1").prop('checked',false);
+                    $("#sex0").prop('checked',true);
+                }else if(obj.sex==1){
+                    $("#sex0").prop('checked',false);
+                    $("#sex1").prop('checked',true);
+                }
+                $("#pic").prop('src',obj.photo);
+            },
+            error:function(){
+                alert("请求失败");
+            }
+        });
+    })
+
+    //    插入
+
+    $("#insert").on('click',function(){
+        if($("input[name='number']").val()==''){
+            alert("请输入学号！");
+        }
+        else if($("input[name='name']").val()==''){
+            alert("请输入姓名！");
+        }
+        else if($("input[name='name']").val()==''){
+            alert("请输入姓名！");
+        }
+        else if($("input[name='sex']").val()==''){
+            alert("请输入性别！");
+        }
+        else if($("input[name='major']").val()==''){
+            alert("请输入专业！");
+        }
+        else if($("input[name='date']").val()==''){
+            alert("请输入出生日期！");
+        }
+        else if($("input[name='score']").val()==''){
+            alert("请输入得分！");
+        }
+        else{
+            $("#pic").prop('src','');
+            if($("#picture").val()!=''){
+                var formData = new FormData();
+                formData.append('file', $('#picture')[0].files[0]);
+
+                $.ajax({
+                    url: 'upload.php',
+                    type: 'POST',
+                    cache: false,
+                    data: formData,
+                    processData: false,
+                    contentType: false
+                }).done(function(res) {
+                    console.log(res);
+                    if(res==3){
+                        alert("照片太大，请选着小于2M的照片！");
+                        return ;
+                    }else{
+                        $("#pic_src").val(res);
+
+                        xhr2=$.ajax({
+                            type:'POST',
+                            data:{
+                                stat:2,
+                                number: $("input[name='number']").val(),
+                                name:   $("input[name='name']").val(),
+                                sex:    $("input[type='radio']:checked").val(),
+                                major:  $("input[name='major']").val(),
+                                date:   $("input[name='date']").val(),
+                                score:  $("input[name='score']").val(),
+                                info:   $("input[name='info']").val(),
+                                photo:  $("#pic_src").val(),
+                            },
+                            dataType:'json',
+                            url:'index.php',
+                            async:true,
+                            success:function (data) {
+                                $("input[name='id']").val(data.id);
+                                $("#pic").prop('src',res);
+                                alert("添加成功！");
+                            },
+                            error:function () {
+                                alert("添加失败！");
+                            }
+                        });
+                    }
+                }).fail(function(res) {
+                    alert("照片上传失败！");
+                    console.log(res);
+                });
+            }else{
+                xhr2=$.ajax({
+                    type:'POST',
+                    data:{
+                        stat:2,
+                        number: $("input[name='number']").val(),
+                        name:   $("input[name='name']").val(),
+                        sex:    $("input[name='sex']").val(),
+                        major:  $("input[name='major']").val(),
+                        date:   $("input[name='date']").val(),
+                        score:  $("input[name='score']").val(),
+                        info:   $("input[name='info']").val(),
+                        photo:  $("#pic_src").val(),
+                    },
+                    dataType:'json',
+                    url:'index.php',
+                    async:true,
+                    success:function (data) {
+                        $("input[name='id']").val(data.id);
+
+                        alert("添加成功！");
+                    },
+                    error:function () {
+                        alert("添加失败！");
+                    }
+                });
+            }
+
+        }
+    })
+
+    //    修改
+    $("#update").click(function(){
+        xhr=$.ajax({
+            type:'POST',
+            data:{
+                stat:3,
+                number: $("input[name='number']").val(),
+                name:   $("input[name='name']").val(),
+                sex:    $("input[name='sex']").val(),
+                major:  $("input[name='major']").val(),
+                date:   $("input[name='date']").val(),
+                score:  $("input[name='score']").val(),
+                info:   $("input[name='info']").val(),
+                photo:  $("input[name='picture']").val(),
+                id:  $("input[name='id']").val(),
+            },
+            dataType:'json',
+            url:'index.php',
+            async:false,
+            success:function (data) {
+                console.log(data);
+                alert("修改成功！")
+            },
+            error:function () {
+            }
+        });
+    })
+
+    //    删除
+    $("#del").click(function(){
+        if(confirm("你确定要删除吗？")){
+            xhr=$.ajax({
+                type:'POST',
+                data:{
+                    stat:4,
+                    id: $("input[name='id']").val()
+                },
+                url:'index.php',
+                async:false,
+                success:function (data) {
+                    if(data!='') {
+                        alert("删除成功！");
+                        $("input[name='number']").val('');
+                        $("input[name='name']").val('');
+                        $("input[name='sex']").val('');
+                        $("input[name='major']").val('');
+                        $("input[name='date']").val('');
+                        $("input[name='score']").val('');
+                        $("input[name='info']").val('');
+                        $("#pic_src").val('');
+                        $("input[name='id']").val('');
+
+                        $("#pic").prop('src','');
+                    }else{
+                        alert("删除失败！");
+                    }
+                },
+                error:function () {
+                }
+            });
+        }
+
+    })
+</script>
+</body>
+</html>

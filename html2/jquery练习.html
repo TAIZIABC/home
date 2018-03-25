@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="../source/jquery-3.2.1.js"></script>
+    <script src="../source/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="../source/jquery-ui.min.css"/>
+    <script>
+        $(document).ready(function(){
+            $("#btn").button().click(function(){
+                $("#div").toggle(500,function(){
+                    alert("dsadas")
+                });
+            })
+            $("a").button().click(function(){
+                $("#div2").toggle(500,function(){
+                    alert("dsadas")
+                });
+            })
+
+        })
+
+
+    </script>
+</head>
+<body>
+   <button id="btn">按钮</button>
+    <div id="div" style="width: 200px;height: 100px;border: 1px solid #000"></div>
+   <a href="#">按钮</a>
+   <div id="div2" style="width: 200px;height: 100px;border: 1px solid #000"></div>
+</body>
+</html>

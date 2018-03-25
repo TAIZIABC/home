@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            margin: 0;
+            padding:0;
+        }
+        div{
+            width: 900px;
+            margin:100px auto;
+        }
+        li{
+            list-style: none;
+        }
+        img{
+            width: 400px;
+            height: 400px;
+        }
+        .aa{
+            transform-origin:0px 500px;
+            animation: sport 2s linear 0s 1 normal;
+        }
+        @keyframes sport{
+            from{
+                transform: rotateY(0deg);
+            }
+            to{
+                transform: rotateY(180deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <img src="../images/pb1.jpg" />
+        <img src="../images/pb2.jpg" class="aa" />
+</body>
+</html>

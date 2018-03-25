@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title>taijitu</title>
+  <style>
+        *{
+          margin: 0;
+          padding: 0;
+        }
+        body{
+          background-color: #cccccc;
+        }
+        .father{
+            width: 800px;
+            height: 610px;
+            margin: 10px auto;
+            border: 1px solid #cccccc;
+            position: relative;
+        }
+        .outer{
+          width: 400px;
+          height: 400px;
+          margin: 100px auto;
+          border-radius: 50%;
+          background:linear-gradient(black 50%,white 50%);//给一个div设置两种不同的颜色;
+          display: flex;
+          align-items: center;
+          /*transform: rotate(0deg);*/
+            /*animation: sport 5s linear 0s infinite normal;*/
+        }
+        .left,.right{
+          width: 50px;
+          height: 50px;
+          border-radius: 50%;
+        }
+        .left{
+          background-color: #fff;
+          border: 75px solid #000;
+        }
+        .right {
+          background-color: #000;
+          border: 75px solid #ffffff;
+        }
+
+        .outer-1{
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background: linear-gradient(#000000 50%,#ffffff 50%);
+            display: flex;
+            align-items: center;
+            position: absolute;
+            top: 0px;
+            left: 335px;
+            transform-origin:65px 300px;
+            transform: rotate(0deg);
+            animation: sport 5s linear 0s infinite normal;
+        }
+        .left-1,.right-1{
+            width: 10px;
+            height: 10px;
+        }
+        .left-1{
+            border-radius: 50%;
+            background-color: #ffffff;
+            border: 20px solid #000;
+        }
+        .right-1{
+            border-radius: 50%;
+            background-color:#000000;
+            border: 20px solid #ffffff;
+        }
+
+        .outer-2{
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background: linear-gradient(#000000 50%,#ffffff 50%);
+            display: flex;
+            align-items: center;
+            position: absolute;
+            left: 100px;
+            top: 260px;
+            transform-origin:300px 40px;
+            transform: rotate(0deg);
+            animation: sport 5s linear 0s infinite normal;
+        }
+        .left-2,.right-2{
+            width: 10px;
+            height: 10px;
+        }
+        .left-2{
+            border-radius: 50%;
+            background-color: #ffffff;
+            border: 20px solid #000;
+        }
+        .right-2{
+            border-radius: 50%;
+            background-color:#000000;
+            border: 20px solid #ffffff;
+        }
+
+        .outer-3{
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background: linear-gradient(#000000 50%,#ffffff 50%);
+            display: flex;
+            align-items: center;
+            position: absolute;
+            left: 335px;
+            top: 500px;
+            transform-origin:65px -200px;
+            transform: rotate(0deg);
+            animation: sport 5s linear 0s infinite normal;
+        }
+        .left-3,.right3{
+            width: 10px;
+            height: 10px;
+        }
+        .left-3{
+            border-radius: 50%;
+            background-color: #ffffff;
+            border: 20px solid #000;
+        }
+        .right-3{
+            border-radius: 50%;
+            background-color:#000000;
+            border: 20px solid #ffffff;
+        }
+
+        .outer-4{
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background: linear-gradient(#000000 50%,#ffffff 50%);
+            display: flex;
+            align-items: center;
+            position: absolute;
+            left: 600px;
+            top: 260px;
+            transform-origin:-200px 40px;
+            transform: rotate(0deg);
+            animation: sport 5s linear 0s infinite normal;
+        }
+        .left-4,.right4{
+            width: 10px;
+            height: 10px;
+        }
+        .left-4{
+            border-radius: 50%;
+            background-color: #ffffff;
+            border: 20px solid #000;
+        }
+        .right-4{
+            border-radius: 50%;
+            background-color:#000000;
+            border: 20px solid #ffffff;
+        }
+
+        @keyframes sport {
+            from{
+                transform: rotate(0deg);
+            }
+            to{
+                transform: rotate(-360deg);
+            }
+        }
+  </style>
+</head>
+<body>
+    <div class="father">
+            <div class="outer">
+                <div class="left"></div>
+              <div class="right"></div>
+            </div>
+            <div class="outer-1">
+                <div class="left-1"></div>
+                <div class="right-1"></div>
+            </div>
+            <div class="outer-2">
+                <div class="left-2"></div>
+                <div class="right-2"></div>
+            </div>
+            <div class="outer-3">
+                <div class="left-3"></div>
+                <div class="right-3"></div>
+            </div>
+        <div class="outer-4">
+            <div class="left-4"></div>
+            <div class="right-4"></div>
+        </div>
+    </div>
+</body>
+</html>

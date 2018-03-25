@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        input{
+            width: 120px;
+            height: 40px;
+            float: left;
+            margin-right:10px ;
+        }
+        #start{
+            margin-left: 400px;
+        }
+
+    </style>
+    <script>
+        window.onload=function(){
+            var cas=document.getElementById("main").getContext("2d");
+            var start=document.getElementById("start");
+            var pause=document.getElementById("pause");
+            var goon=document.getElementById("goon");
+            var reset=document.getElementById("reset");
+            cas.fillStyle='black';
+            cas.fillRect(0,0,1300,500);          //初始化画板
+            function draw(x,y,c) {
+                cas.fillStyle=c;
+                cas.fillRect(x,y,18,18)
+            };
+            start.onclick=function(){
+                run();
+            }
+
+                var arrX=[100,120,140];
+                var arrY=[100,100,100];
+                //    蛇的初始位置
+                var a=140;
+                var b=100;
+                var stat=3;
+                var x,y,lastStat,m=0;                                //随机点的位置
+                //    初始化一个随机点
+                x=Math.floor(Math.random()*1300);
+                y=Math.floor(Math.random()*500);
+                x=(x%20)*40;
+                y=(y%20)*20;
+                draw(x,y,'yellow');
+                var run = function (){
+                    pause.onclick=function(){
+                        lastStat=stat;
+                        stat=0;
+                    }
+                    goon.onclick=function(){
+                        stat=lastStat;
+                        run();
+                    }
+                    reset.onclick=function(){
+                         arrX=[100,120,140];
+                         arrY=[100,100,100];
+                         a=140;
+                         b=100;
+                         stat=3;
+                         x,y,lastStat,m=0;                                //随机点的位置
+                        cas.fillRect(0,0,1300,500)
+                        x=Math.floor(Math.random()*1300);
+                        y=Math.floor(Math.random()*500);
+                        x=(x%20)*40;
+                        y=(y%20)*20;
+                        draw(x,y,'yellow');
+                    }
+                    window.onkeydown=function(e){
+                        if(e.keyCode==37&&stat!=3){
+                            stat=1;
+                        }
+                        if(e.keyCode==38&&stat!=4){
+                            stat=2;
+                        }
+                        if(e.keyCode==39&&stat!=1){
+                            stat=3;
+                        }
+                        if(e.keyCode==40&&stat!=2){
+                            stat=4;
+                        }
+                    };
+                    for(var i=3;i<arrX.length;i++){
+                        if(a==arrX[i]&&b==arrY[i]){
+                            m=1;
+                        }
+                    }
+                    if(a<=-1||a>1300||b<=-1||b>600||(arrX.indexOf(a,3)!=-1&&arrY.indexOf(b,3)!=-1&&m==1)){
+                        return alert("游戏结束");
+                    }
+                    if(a==x&&b==y){
+                        arrX.unshift(x);
+                        arrY.unshift(y);
+                        x=Math.floor(Math.random()*1300);
+                        y=Math.floor(Math.random()*500);
+                        x=(x%20)*40;
+                        y=(y%20)*20;
+                        draw(x,y,'yellow');
+                    }
+                    switch (stat){
+                        case 0:return;
+                        case 1:
+                            arrX.unshift(a=a-20);
+                            arrY.unshift(b);
+                            draw(arrX[0],arrY[0],'yellow');
+                            break;
+                        case 2:
+                            arrX.unshift(a);
+                            arrY.unshift(b=b-20);
+                            draw(arrX[0],arrY[0],'yellow');
+                            break;
+                        case 3:
+                            arrX.unshift(a=a+20);
+                            arrY.unshift(b);
+                            draw(arrX[0],arrY[0],'yellow');
+                            break;
+                        case 4:
+                            arrX.unshift(a);
+                            arrY.unshift(b=b+20);
+                            draw(arrX[0],arrY[0],'yellow');
+                            break;
+                    }
+                    draw(arrX.pop(),arrY.pop(),'black');
+                    if(arrX.length<10){
+                        setTimeout(arguments.callee,200);
+                    }else{
+                        setTimeout(arguments.callee,100);
+                    }
+                };
+        }
+    </script>
+</head>
+<body>
+<input type="button" id="start" value="开始游戏">
+<input type="button" id="pause" value="暂停游戏">
+<input type="button" id="goon" value="继续游戏">
+<input type="button" id="reset" value="重新开始">
+<br/><br/>
+<canvas id="main" width="1300" height="500"></canvas>
+
+</body>
+</html>

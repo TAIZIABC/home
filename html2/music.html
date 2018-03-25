@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="../source/jquery-3.2.1.js"></script>
+    <script src="../source/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="../source/jquery-ui.min.css"/>
+    <script>
+        $(document).ready(function(){
+            $("a").button();
+            var i= 0;
+            $("#bt1").click(function(){
+                if(i<4){
+                    i++;
+                    document.getElementById("aud").src = "../music/"+i+".mp3";
+                }else{
+                    alert("往下没歌了");
+                }
+            });
+            $("#bt2").click(function(){
+                if(i>0){
+                    i--;
+                    document.getElementById("aud").src = "../music/"+i+".mp3";
+                }else{
+                    alert("往上没歌了");
+                }
+            });
+        });
+    </script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background: url("../images/mn5.jpg");
+            background-size: cover;
+        }
+        h1{
+            text-align: center;
+        }
+        #div{
+            width: 710px;
+            height: 400px;
+            margin: 100px 250px;
+            border: 1px solid #000;
+            background: url(../images/dg.jpg) no-repeat;
+            background-size: contain;
+            position: relative;
+        }
+        a{
+            list-style: none;
+            position: absolute;
+            left: 235px;
+            bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>音乐播放器</h1>
+    <div id="div">
+        <audio src="../music/0.mp3" id="aud" controls="controls" autoplay="autoplay" ></audio>
+        <a href="#" id="bt1">下一首</a>
+        <a href="#" id="bt2">上一首</a>
+    </div>
+
+</body>
+</html>

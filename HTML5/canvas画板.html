@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #canvas{
+            background-color: #0e1223;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="canvas" width="1366" height="500"></canvas>
+    选择颜色：<input type="color" id="col" value="yellow"/>&nbsp;&nbsp;&nbsp;
+    选择大小：<input type="range" min="1" max="50" step="1" value="4" id="size"/><span id="num">4</span>&nbsp;&nbsp;
+    <button id="start">绘制</button>
+    <button id="del">擦除</button>
+    <button id="clear">清空</button>
+    <script>
+        var canvas=document.getElementById("canvas");
+        var cv=canvas.getContext("2d");
+        cv.strokeStyle="yellow";
+        cv.lineWidth=4;
+        var col;                                    //用来记录清除按钮上次的颜色
+        canvas.onmousedown=function(e){
+            var st_left= e.clientX;
+            var st_top= e.clientY;
+            cv.beginPath();
+            cv.moveTo(st_left,st_top);
+            canvas.onmousemove=function(e){         //鼠标移动绘制
+                var new_left= e.clientX;
+                var new_top= e.clientY;
+                cv.lineTo(new_left,new_top);
+                cv.stroke();
+            }
+        }
+        canvas.onmouseup=function(){                //鼠标抬起时将移动事件移出
+            canvas.onmousemove=null;
+        }
+        document.getElementById("col").onchange=function(){             //改变颜色
+            cv.strokeStyle=this.value;
+        }
+        document.getElementById("size").onchange=function(){            //改变粗细
+            cv.lineWidth=this.value;
+            document.getElementById("num").innerHTML=this.value;
+        }
+        document.getElementById("del").onclick=function(){              //清除按钮
+            col=cv.strokeStyle;
+            cv.strokeStyle="#0e1223";
+        }
+        document.getElementById("start").onclick=function(){            //绘制按钮
+            cv.strokeStyle=col;
+        }
+        document.getElementById("clear").onclick=function(){            //重置按钮
+            cv.fillStyle="#0e1223";
+            cv.fillRect(0,0,1366,500);
+        }
+    </script>
+</body>
+</html>

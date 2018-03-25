@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #aa{
+            width: 600px;
+            height: 500px;
+            border: 1px solid #000;
+            margin: 20px auto;
+            position: relative;
+        }
+        #bb{
+            width: 600px;
+            height: 30px;
+        }
+        #bb li{
+            width: 200px;
+            height: 30px;
+            float: left;
+            line-height: 30px;
+            text-align: center;
+            color: white;
+            list-style: none;
+        }
+        #bb li:nth-child(1){
+            background: red;
+        }
+        #bb li:nth-child(2){
+            background: blue;
+        }
+        #bb li:nth-child(3){
+            background: green;
+        }
+        #aa div{
+            width: 550px;
+            line-height: 450px;
+            text-align: center;
+            font-size: 200px;
+            font-weight: 500;
+            position: absolute;
+            left: 25px;
+            top: 45px;
+            background-color: red;
+            display: none;
+        }
+    </style>
+    <script>
+        window.onload=function(){
+            var outer=document.getElementById("aa");
+            var lis=outer.getElementsByTagName("li");
+            var div=outer.getElementsByTagName("div");
+            for(var i=0;i<lis.length;i++){
+                lis[i].index=i;
+                lis[i].onclick=function(){
+                    for(var i=0;i<div.length;i++){
+                        div[i].style.display="none";
+                    }
+                    div[this.index].style.display="block";
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <div id="aa">
+        <ul id="bb">
+            <li>新闻</li>
+            <li>图片</li>
+            <li>视频</li>
+        </ul>
+        <div style="display: block">AAA</div>
+        <div>BBB</div>
+        <div>CCC</div>
+    </div>
+</body>
+</html>

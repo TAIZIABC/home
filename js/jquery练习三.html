@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="../css/style.css"/>
+    <script src="../source/jquery-3.2.1.js"></script>
+    <script>
+        $(document).ready(function(){
+           $("#btn").on("click",show);
+            function show(){
+                $("#div1").text("hello world");
+            }
+            $("#btn2").on("click",show4);
+            function show3(){
+//          获取的方法
+                alert($("#aid").attr("href"));
+                alert($("#txt").attr("value"));
+            }
+//            修改的方法
+            function show2(){
+                $("#div1").html("<a href='http://106.15.228.252'>超链接</a>");
+//                $("#div1").html("<b>我是重新设置后的内容</b>");
+            }
+//            添加方法
+            function show4(){
+//                $("#div1").append("dsadsa");
+//                $("#div1").append("<h1>表题</h1>" )
+
+
+            }
+
+        });
+    </script>
+</head>
+<body>
+    <button id="btn">按钮</button>
+    <button id="btn2">按钮</button>
+    <input type="text" id="txt" value="dsafada"/>
+    <a href="http://106.15.228.252" id="aid">我的网站</a>
+    <div id="div1" style="width: 100px;height: 100px;background-color: red"></div>
+</body>
+</html>
